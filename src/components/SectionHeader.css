@@ -1,0 +1,26 @@
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-number {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-right: 1rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+.section-line {
+  height: 1px;
+  background-color: var(--line-color);
+  flex-grow: 1;
+  margin-left: 1.5rem;
+}

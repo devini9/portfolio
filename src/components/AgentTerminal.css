@@ -1,0 +1,167 @@
+.agent-chat {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 400px;
+  background: rgba(13, 13, 13, 0.85);
+  border: 1px solid var(--line-color);
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  background: rgba(26, 26, 26, 0.9);
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line-color);
+}
+
+.chat-title {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: var(--text-main);
+}
+
+.chat-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.chat-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  opacity: 0.5;
+}
+
+.chat-dots span:nth-child(1) { background: #ff5f56; }
+.chat-dots span:nth-child(2) { background: #ffbd2e; }
+.chat-dots span:nth-child(3) { background: #27c93f; }
+
+.chat-body {
+  padding: 1rem;
+  height: 300px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.chat-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+  background: var(--line-color);
+  border-radius: 4px;
+}
+
+.chat-message {
+  display: flex;
+  gap: 0.75rem;
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.avatar-cybersec { background: #e03131; }
+.avatar-web { background: #1c7ed6; }
+.avatar-data { background: #2f9e44; }
+.avatar-editorial { background: #9c36b5; }
+.avatar-dev { background: #f08c00; }
+.avatar-rh { background: #0c8599; }
+
+.color-cybersec { color: #ff6b6b; }
+.color-web { color: #339af0; }
+.color-data { color: #51cf66; }
+.color-editorial { color: #cc5de8; }
+.color-dev { color: #fcc419; }
+.color-rh { color: #22b8cf; }
+
+.chat-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.chat-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.sender-name {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.msg-time {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.msg-text {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+/* Tarja Preta (Redacted) */
+.redacted {
+  color: transparent;
+  background-color: #000;
+  padding: 0 4px;
+  border-radius: 2px;
+  user-select: none;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.redacted:hover {
+  background-color: #222; /* leve feedback visual no hover, mas continua ilegível */
+}
+
+.chat-typing {
+  padding-left: 2.75rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .agent-chat {
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+    width: auto;
+    height: 250px;
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "projetos": [
+    {
+      "id": "MeuPrimeiroProjeto",
+      "frontmatter": {
+        "title": "Meu Primeiro Projeto",
+        "tags": [
+          "portfolio",
+          "react",
+          "gamification"
+        ]
+      },
+      "content": "\n# Sobre o Projeto\nEste é um projeto de demonstração criado automaticamente pelo Agente Hermes. O objetivo é testar o fluxo completo desde o **Obsidian** até o **GitHub Pages**, passando pelo PostgreSQL local!\n\n## Funcionalidades\n- Leitura automatizada\n- Gamificação\n- Deploy contínuo\n"
+    }
+  ],
+  "regras": {
+    "ConfiguracaoGamificacao": {
+      "title": "Configurações Globais do Portfólio",
+      "type": "regras",
+      "gamification": {
+        "xp_por_visita": 10,
+        "xp_por_clique_projeto": 50,
+        "niveis": [
+          {
+            "level": 1,
+            "nome": "Visitante Curioso",
+            "xp_necessario": 0
+          },
+          {
+            "level": 2,
+            "nome": "Explorador de Código",
+            "xp_necessario": 100
+          },
+          {
+            "level": 3,
+            "nome": "Recrutador Lendário",
+            "xp_necessario": 500
+          }
+        ]
+      }
+    }
+  },
+  "artigos": []
+}

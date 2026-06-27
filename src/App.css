@@ -1,0 +1,94 @@
+.main-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Evita que o texto encoste no chat em telas maiores */
+@media (min-width: 1024px) {
+  .main-container {
+    padding-right: 440px; /* 400px do chat + margens */
+  }
+}
+
+.section {
+  padding: 6rem 0;
+}
+
+.section-lead {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  max-width: 900px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.loading {
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+}
+
+.about-content {
+  max-width: 1000px;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--text-main);
+}
+
+.about-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--text-muted);
+}
+
+.about-list li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--brand-color);
+  font-family: var(--font-mono);
+}
+
+.about-list strong {
+  color: var(--text-main);
+  font-family: var(--font-mono);
+}
+
+.site-footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  margin-top: 4rem;
+  border-top: 1px solid var(--line-color);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 0;
+  }
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  /* Espaço no rodapé para o chat mobile que fica 100% de largura */
+  .site-footer {
+    padding-bottom: 280px; 
+  }
+}
