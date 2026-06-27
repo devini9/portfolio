@@ -10,23 +10,23 @@ interface AgentDef {
 
 const AGENTS: AgentDef[] = [
   { name: 'Josiane Martins', dept: 'cybersec' },
-  { name: 'Cipher', dept: 'cybersec' },
+  { name: 'Cipher Costa', dept: 'cybersec' },
   { name: 'Carlos Mendes', dept: 'web' },
-  { name: 'Maya', dept: 'web' },
-  { name: 'Silas', dept: 'web' },
-  { name: 'Hermes', dept: 'data' },
-  { name: 'Vector', dept: 'data' },
-  { name: 'Sofia', dept: 'editorial' },
-  { name: 'Luna', dept: 'editorial' },
-  { name: 'Íris', dept: 'editorial' },
+  { name: 'Maya Santos', dept: 'web' },
+  { name: 'Silas Ferreira', dept: 'web' },
+  { name: 'Hermes Silva', dept: 'data' },
+  { name: 'Vector Lima', dept: 'data' },
+  { name: 'Sofia Almeida', dept: 'editorial' },
+  { name: 'Luna Castro', dept: 'editorial' },
+  { name: 'Íris Ribeiro', dept: 'editorial' },
   { name: 'José Alcântara', dept: 'dev' },
-  { name: 'Alan', dept: 'dev' },
-  { name: 'Ada', dept: 'dev' },
-  { name: 'Bugsy', dept: 'dev' },
-  { name: 'Linus', dept: 'dev' },
-  { name: 'Clara', dept: 'rh' },
-  { name: 'Otto', dept: 'rh' },
-  { name: 'Lia', dept: 'rh' }
+  { name: 'Alan Pereira', dept: 'dev' },
+  { name: 'Ada Gomes', dept: 'dev' },
+  { name: 'Bugsy Souza', dept: 'dev' },
+  { name: 'Linus Carvalho', dept: 'dev' },
+  { name: 'Clara Nogueira', dept: 'rh' },
+  { name: 'Otto Müller', dept: 'rh' },
+  { name: 'Lia Fernandes', dept: 'rh' }
 ];
 
 const messagesByDept: Record<Department, string[]> = {
