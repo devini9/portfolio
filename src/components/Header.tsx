@@ -13,7 +13,7 @@ export function Header() {
         <nav className="header-nav">
           <a href="#projects">Projetos</a>
           <a href="#about">Arquitetura</a>
-          <a href="#contact">Contato</a>
+          <a href="#contato">Contato</a>
           <a href="/portfolio/data/curriculo.pdf" target="_blank" rel="noopener noreferrer" className="cv-btn">
             [ BAIXAR CV ]
           </a>
