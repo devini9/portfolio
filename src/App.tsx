@@ -5,6 +5,7 @@ import { Hero } from './components/Hero';
 import { SectionHeader } from './components/SectionHeader';
 import { ProjectCard } from './components/ProjectCard';
 import { AgentTerminal } from './components/AgentTerminal';
+import { Contact } from './components/Contact';
 
 function App() {
   const [data, setData] = useState<any>(null);
@@ -52,6 +53,8 @@ function App() {
             </ul>
           </div>
         </section>
+
+        <Contact />
 
       </main>
 

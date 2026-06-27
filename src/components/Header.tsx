@@ -14,6 +14,9 @@ export function Header() {
           <a href="#projects">Projetos</a>
           <a href="#about">Arquitetura</a>
           <a href="#contact">Contato</a>
+          <a href="/base-devini9/data/curriculo.pdf" target="_blank" rel="noopener noreferrer" className="cv-btn">
+            [ BAIXAR CV ]
+          </a>
         </nav>
       </div>
     </header>
