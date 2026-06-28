@@ -13,7 +13,7 @@
   transform: translateX(-50%);
   width: 600px;
   height: 400px;
-  background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0) 70%);
+  background: radial-gradient(circle, rgba(49,130,206,0.06) 0%, rgba(244,246,249,0) 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -48,7 +48,7 @@
 .btn-primary {
   display: inline-block;
   background: var(--text-main);
-  color: var(--bg-color);
+  color: #fff;
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
   font-family: var(--font-mono);
@@ -60,7 +60,7 @@
 .btn-primary:hover {
   background: var(--color-salmon);
   transform: translateY(-2px);
-  color: var(--bg-color);
+  color: #fff;
 }
 
 @media (max-width: 768px) {

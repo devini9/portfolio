@@ -13,7 +13,7 @@
 .project-card:hover {
   background: var(--bg-surface-hover);
   transform: translateY(-4px);
-  border-color: #333;
+  border-color: #a0aec0;
 }
 
 .project-title {

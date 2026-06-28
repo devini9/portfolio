@@ -58,7 +58,7 @@
 
 .input-group input,
 .input-group textarea {
-  background: rgba(13, 13, 13, 0.5);
+  background: #ffffff;
   border: 1px solid var(--line-color);
   padding: 0.75rem 1rem;
   border-radius: 4px;
@@ -75,8 +75,8 @@
 }
 
 .submit-btn {
-  background: var(--color-moss);
-  color: #000;
+  background: var(--color-salmon);
+  color: #fff;
   border: none;
   padding: 1rem;
   font-family: var(--font-mono);
@@ -89,7 +89,7 @@
 }
 
 .submit-btn:hover {
-  background: #fff;
+  background: var(--color-moss);
   transform: translateY(-2px);
 }
 

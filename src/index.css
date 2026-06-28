@@ -1,18 +1,18 @@
 :root {
-  /* Cores Minimalistas & Dark Mode */
-  --bg-color: #0d0d0d;
-  --bg-surface: #141414;
-  --bg-surface-hover: #1a1a1a;
+  /* Tema Claro e Frio */
+  --bg-color: #f4f6f9;
+  --bg-surface: #ffffff;
+  --bg-surface-hover: #eef2f6;
   
-  --text-main: #f0f0f0;
-  --text-muted: #888888;
+  --text-main: #2d3748;
+  --text-muted: #718096;
   
-  /* Cores de Destaque */
-  --color-salmon: #E87A5D;
-  --color-moss: #4A5D23;
+  /* Cores de Destaque (Azul/Frio) */
+  --color-salmon: #3182ce;
+  --color-moss: #2b6cb0;
   
   --brand-color: var(--color-salmon);
-  --line-color: #2a2a2a;
+  --line-color: #e2e8f0;
   
   /* Fontes */
   --font-mono: 'JetBrains Mono', monospace;
@@ -42,11 +42,11 @@ body {
   background: var(--bg-color);
 }
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: #cbd5e0;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #a0aec0;
 }
 
 a {
