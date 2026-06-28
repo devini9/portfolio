@@ -2,8 +2,10 @@ import './SkillsMarquee.css';
 
 export function SkillsMarquee() {
   const skills = [
-    "React", "TypeScript", "Vite", "Node.js", "Firebase", "Google Cloud", 
-    "Git", "DataOps", "CI/CD", "Next.js", "TailwindCSS", "Python"
+    "SQL", "PostgreSQL", "SQL Server", "Oracle DB", "Power BI", "Data Science", "Grafana",
+    "Python", "Agentes de IA", "Automação IA", "Prompt Engineering", "LLMs",
+    "Azure", "AWS", "Google Cloud", "Docker", "Portainer", "Azure Service Bus",
+    "Git / GitHub", "Scrum", "Kanban", "QA & Testes", "VS Code"
   ];
 
   // Duplicamos a lista para o scroll infinito funcionar sem saltos
