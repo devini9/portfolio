@@ -9,7 +9,6 @@ export function Contact() {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    const name = formData.get('name');
     const email = formData.get('email');
     const message = formData.get('message');
 
@@ -23,8 +22,7 @@ export function Contact() {
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          _subject: `Novo Contato via Agente Otto - de ${name}`,
-          nome: name,
+          _subject: `Novo Contato via Agente Otto`,
           email: email,
           mensagem: message
         })
@@ -46,35 +44,35 @@ export function Contact() {
   return (
     <section className="contact-section section" id="contato">
       <div className="main-container">
-        <h2 className="section-title">Inicie uma Conexão</h2>
+        <h2 className="section-title">Contato</h2>
         
         <div className="contact-grid">
           <div className="contact-info">
-            <h3>Terminal de Comunicação</h3>
-            <p>
-              Nossa equipe de Atendimento (Otto) está pronta para receber 
-              sua mensagem e redirecioná-la diretamente para a caixa de 
-              entrada criptografada do Vinícius.
+            <p style={{ fontSize: '1.2rem', lineHeight: '1.8' }}>
+              Os agentes de Atendimento estam prontos para receber 
+              sua mensagem e redirecioná-la diretamente para o Vinícius.
             </p>
             <div className="contact-methods">
-              <p>📍 Matriz: Base Devini9, Nuvem</p>
-              <p>✉️ Email Seguro: viniciusfv.9@gmail.com</p>
+              <p>✉️ Email: viniciusfv.9@gmail.com</p>
             </div>
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="input-group">
-              <label htmlFor="name">Identificação do Usuário (Nome)</label>
-              <input type="text" id="name" name="name" required placeholder="Ex: Visitante 1042" />
-            </div>
-            
-            <div className="input-group">
               <label htmlFor="email">E-mail para Retorno</label>
-              <input type="email" id="email" name="email" required placeholder="email@dominio.com" />
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                placeholder="email@dominio.com"
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                title="Por favor, insira um endereço de e-mail válido (ex: nome@dominio.com)"
+              />
             </div>
             
             <div className="input-group">
-              <label htmlFor="message">Dados da Transmissão (Mensagem)</label>
+              <label htmlFor="message">Escreva sua Mensagem</label>
               <textarea id="message" name="message" rows={5} required placeholder="Insira sua mensagem aqui..."></textarea>
             </div>
 
