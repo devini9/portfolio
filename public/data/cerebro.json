@@ -1,9 +1,30 @@
 {
   "metadata": {
-    "lastUpdate": "2026-06-28T04:04:36.836Z",
+    "lastUpdate": "2026-06-28T08:30:18.665Z",
     "source": "Google Sheets (DataOps)"
   },
   "projetos": [],
-  "regras": [],
+  "regras": [
+    {
+      "regra": "Agent Hermes",
+      "descricao": "Líder de DataOps. Coleta e sincroniza projetos e configurações do Google Drive para o código-fonte via automação invisível na nuvem."
+    },
+    {
+      "regra": "Agent Clara",
+      "descricao": "Departamento de RH. Responsável por buscar, validar e atualizar o seu currículo em PDF mais recente direto do Google Drive."
+    },
+    {
+      "regra": "Agent Otto",
+      "descricao": "Departamento de Atendimento. Fica de prontidão no portfólio 24/7 para interceptar mensagens de recrutadores e enviar para o seu e-mail criptografado."
+    },
+    {
+      "regra": "Agent Pixel",
+      "descricao": "Engenheiro de Front-end. Consome todo o Cérebro de Dados em JSON e constrói dinamicamente a sua interface visual usando React e Vite."
+    },
+    {
+      "regra": "Agent Aegis",
+      "descricao": "Chefe de DevOps. Orquestra e monitora as rotinas de cron (trabalhando a cada 1 minuto) no GitHub Actions para garantir que a sincronização de todos os agentes nunca pare."
+    }
+  ],
   "artigos": []
 }
