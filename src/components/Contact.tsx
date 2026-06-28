@@ -9,28 +9,37 @@ export function Contact() {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    // Substitua pela sua chave do Web3Forms futuramente se quiser esconder, 
-    // mas chaves do Web3Forms são públicas por design.
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE"); 
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const message = formData.get('message');
 
-    setStatus('Enviando...');
+    setStatus('Transmitindo dados... 📡');
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("https://formsubmit.co/ajax/viniciusfv.9@gmail.com", {
         method: "POST",
-        body: formData
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: `Novo Contato via Agente Otto - de ${name}`,
+          nome: name,
+          email: email,
+          mensagem: message
+        })
       });
 
       const data = await response.json();
 
-      if (data.success) {
-        setStatus('Mensagem enviada com sucesso! O Otto agradece.');
+      if (data.success === "true" || response.ok) {
+        setStatus('✅ Mensagem enviada com sucesso! O Otto repassou tudo para o Vinícius.');
         form.reset();
       } else {
-        setStatus('Erro ao enviar. Tente novamente mais tarde.');
+        setStatus('⚠️ Erro ao enviar. Tente novamente mais tarde.');
       }
     } catch (err) {
-      setStatus('Falha na comunicação. O sistema está offline?');
+      setStatus('❌ Falha na comunicação. O sistema está offline?');
     }
   };
 
