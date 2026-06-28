@@ -9,9 +9,7 @@ export function Hero() {
         <p className="hero-tagline">
           Consultor de Banco de Dados | LLMs | Agentes de IA | Python | SQL.
           <br /><br />
-          E aí, tudo certo? Meu nome é Vinícius Vitorino e eu sou apaixonado por transformar dados complexos em inteligência que realmente funciona. Eu passo a maior parte do meu tempo arquitetando sistemas de Inteligência Artificial e estruturando bancos de dados robustos para resolver problemas.
-          <br /><br />
-          Ah, e um detalhe: esse portfólio não é um site comum. Ele é um ecossistema vivo que meus próprios agentes de IA atualizam pra mim enquanto eu me preocupo em sempre aprender e evoluir.
+          E aí, tudo certo? Meu nome é Vinícius Vitorino e esse portfólio não é um site comum. Ele é um ecossistema vivo que meus próprios agentes de IA atualizam pra mim enquanto eu me preocupo em sempre aprender e evoluir.
         </p>
         <div className="hero-actions">
           <a href="#projects" className="btn-primary">Ver Projetos</a>
