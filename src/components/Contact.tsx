@@ -31,7 +31,7 @@ export function Contact() {
       const data = await response.json();
 
       if (data.success === "true" || response.ok) {
-        setStatus('✅ Mensagem enviada com sucesso! O Otto repassou tudo para o Vinícius.');
+        setStatus('✅ Mensagem enviada com sucesso!!.');
         form.reset();
       } else {
         setStatus('⚠️ Erro ao enviar. Tente novamente mais tarde.');
@@ -77,7 +77,7 @@ export function Contact() {
             </div>
 
             <button type="submit" className="submit-btn">
-              [ ENTER ] Transmitir Dados
+              Enviar
             </button>
             
             {status && <div className="form-status">{status}</div>}
