@@ -5,6 +5,7 @@
   overflow: hidden;
   margin-top: -3rem; /* Traz um pouco mais perto do Hero */
   margin-bottom: 2rem;
+  pointer-events: none;
 }
 
 /* Efeito de fade nas bordas para o marquee não cortar seco */
@@ -38,12 +39,8 @@
   display: flex;
   gap: 2rem;
   padding-left: 2rem; /* espaço inicial */
-  animation: scroll-marquee 25s linear infinite;
+  animation: scroll-marquee 45s linear infinite;
   white-space: nowrap;
-}
-
-.marquee-track:hover {
-  animation-play-state: paused;
 }
 
 .skill-badge {
@@ -57,15 +54,7 @@
   font-size: 0.95rem;
   font-weight: 500;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
-  transition: all 0.3s ease;
   user-select: none;
-}
-
-.skill-badge:hover {
-  border-color: var(--color-salmon);
-  color: var(--color-salmon);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(232, 122, 93, 0.1); /* Sombra salmão */
 }
 
 @keyframes scroll-marquee {
