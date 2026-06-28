@@ -7,9 +7,9 @@
   --text-main: #2d3748;
   --text-muted: #718096;
   
-  /* Cores de Destaque (Azul/Frio) */
-  --color-salmon: #3182ce;
-  --color-moss: #2b6cb0;
+  /* Cores de Destaque (Originais quentes) */
+  --color-salmon: #E87A5D;
+  --color-moss: #4A5D23;
   
   --brand-color: var(--color-salmon);
   --line-color: #e2e8f0;
@@ -27,6 +27,8 @@
 
 body {
   background-color: var(--bg-color);
+  background-image: radial-gradient(var(--line-color) 1px, transparent 1px);
+  background-size: 24px 24px;
   color: var(--text-main);
   font-family: var(--font-sans);
   line-height: 1.6;

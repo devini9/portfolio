@@ -6,6 +6,7 @@ import { SectionHeader } from './components/SectionHeader';
 import { ProjectCard } from './components/ProjectCard';
 import { AgentTerminal } from './components/AgentTerminal';
 import { Contact } from './components/Contact';
+import { SkillsMarquee } from './components/SkillsMarquee';
 
 function App() {
   const [data, setData] = useState<any>(null);
@@ -22,6 +23,7 @@ function App() {
       <Header />
       <main className="main-container">
         <Hero />
+        <SkillsMarquee />
         <AgentTerminal />
         
         <section id="projects" className="section">

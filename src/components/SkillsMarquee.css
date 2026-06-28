@@ -1,0 +1,93 @@
+.skills-marquee-container {
+  position: relative;
+  width: 100%;
+  padding: 3rem 0;
+  overflow: hidden;
+  margin-top: -3rem; /* Traz um pouco mais perto do Hero */
+  margin-bottom: 2rem;
+}
+
+/* Efeito de fade nas bordas para o marquee não cortar seco */
+.marquee-fade-left,
+.marquee-fade-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 150px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee-fade-left {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-color) 0%, transparent 100%);
+}
+
+.marquee-fade-right {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-color) 0%, transparent 100%);
+}
+
+.skills-marquee {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 2rem;
+  padding-left: 2rem; /* espaço inicial */
+  animation: scroll-marquee 25s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.skill-badge {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--bg-surface);
+  color: var(--text-main);
+  border: 1px solid var(--line-color);
+  border-radius: 50px;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.skill-badge:hover {
+  border-color: var(--color-salmon);
+  color: var(--color-salmon);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(232, 122, 93, 0.1); /* Sombra salmão */
+}
+
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Desloca 50% porque dobramos os itens para loop perfeito */
+    transform: translateX(calc(-50% - 1rem)); 
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-marquee-container {
+    padding: 2rem 0;
+  }
+  .skill-badge {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+  .marquee-fade-left,
+  .marquee-fade-right {
+    width: 60px;
+  }
+}
