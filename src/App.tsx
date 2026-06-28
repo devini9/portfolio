@@ -47,9 +47,13 @@ function App() {
               Este portfólio não é estático. Ele é um ecossistema vivo alimentado por agentes autônomos.
             </p>
             <ul className="about-list">
-              <li><strong>Agent Hermes:</strong> Coleta e sincroniza dados do GitHub para o Obsidian Vault local via automação invisível.</li>
-              <li><strong>Agent Aegis:</strong> Rotinas de cron em Node.js que realizam auditoria, backup semanal e garantem a integridade da base.</li>
-              <li><strong>Agent Pixel:</strong> A interface visual (onde você está navegando) que consome o JSON do Obsidian e renderiza tudo estaticamente via React e Vite.</li>
+              {data?.regras && data.regras.length > 0 ? (
+                data.regras.map((item: any, idx: number) => (
+                  <li key={idx}><strong>{item.regra}:</strong> {item.descricao}</li>
+                ))
+              ) : (
+                <li><span className="brand-cursor"></span> Sincronizando arquitetura...</li>
+              )}
             </ul>
           </div>
         </section>
