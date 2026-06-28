@@ -12,6 +12,11 @@ function App() {
   const [data, setData] = useState<any>(null);
 
   useEffect(() => {
+    if (window.location.hash) {
+      window.history.replaceState(null, '', window.location.pathname);
+    }
+    window.scrollTo(0, 0);
+
     fetch(`${import.meta.env.BASE_URL}data/cerebro.json`)
       .then(res => res.json())
       .then(json => setData(json))
