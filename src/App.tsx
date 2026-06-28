@@ -22,6 +22,7 @@ function App() {
       <Header />
       <main className="main-container">
         <Hero />
+        <AgentTerminal />
         
         <section id="projects" className="section">
           <SectionHeader number="01" title="Projetos em Destaque" />
@@ -65,8 +66,6 @@ function App() {
       <footer className="site-footer">
         <span>© 2026 devini9. Sistemas operando normalmente.</span>
       </footer>
-
-      <AgentTerminal />
     </>
   );
 }
