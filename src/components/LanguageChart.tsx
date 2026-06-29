@@ -12,7 +12,7 @@ interface LanguageChartProps {
 
 export function LanguageChart({ stats }: LanguageChartProps) {
   if (!stats || stats.length === 0) {
-    return <p className="loading"><span className="brand-cursor"></span> Analisando repositórios...</p>;
+    return <p className="loading"><span className="brand-cursor"></span> Nenhuma linguagem pública para exibir no momento.</p>;
   }
 
   return (

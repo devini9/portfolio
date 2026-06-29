@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import './App.css';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
@@ -9,19 +9,17 @@ import { Contact } from './components/Contact';
 import { SkillsMarquee } from './components/SkillsMarquee';
 import { LanguageChart } from './components/LanguageChart';
 
+// @ts-ignore
+import cerebroData from '../public/data/cerebro.json';
+
 function App() {
-  const [data, setData] = useState<any>(null);
+  const data = cerebroData;
 
   useEffect(() => {
     if (window.location.hash) {
       window.history.replaceState(null, '', window.location.pathname);
     }
     window.scrollTo(0, 0);
-
-    fetch(`${import.meta.env.BASE_URL}data/cerebro.json?v=${new Date().getTime()}`)
-      .then(res => res.json())
-      .then(json => setData(json))
-      .catch(err => console.error("Error fetching data:", err));
   }, []);
 
   return (
@@ -44,7 +42,7 @@ function App() {
                 <ProjectCard key={proj.id} project={proj} />
               ))
             ) : (
-              <p className="loading"><span className="brand-cursor"></span> Carregando repositórios...</p>
+              <p className="loading"><span className="brand-cursor"></span> Nenhum repositório público configurado para exibição no momento.</p>
             )}
           </div>
           
