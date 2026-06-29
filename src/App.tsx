@@ -18,7 +18,7 @@ function App() {
     }
     window.scrollTo(0, 0);
 
-    fetch(`${import.meta.env.BASE_URL}data/cerebro.json`)
+    fetch(`${import.meta.env.BASE_URL}data/cerebro.json?v=${new Date().getTime()}`)
       .then(res => res.json())
       .then(json => setData(json))
       .catch(err => console.error("Error fetching data:", err));
