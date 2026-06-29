@@ -29,16 +29,16 @@ function App() {
       <main className="main-container">
         <Hero />
         <SkillsMarquee />
-        <AgentTerminal />
+        <AgentTerminal lastUpdate={data?.metadata?.lastUpdate} />
         
         <section id="projects" className="section">
-          <SectionHeader number="01" title="Projetos em Destaque" />
+          <SectionHeader title="Projetos em Destaque" />
           <div className="section-lead">
             Repositórios e arquiteturas extraídas da base de operações.
           </div>
           
           <div className="project-grid">
-            {data?.projetos ? (
+            {data?.projetos && data.projetos.length > 0 ? (
               data.projetos.map((proj: any) => (
                 <ProjectCard key={proj.id} project={proj} />
               ))
@@ -46,10 +46,20 @@ function App() {
               <p className="loading"><span className="brand-cursor"></span> Carregando repositórios...</p>
             )}
           </div>
+          
+          {/* Private Repos Note will go here */}
+          {data?.privateRepos && (
+            <div className="private-repos-note" style={{ marginTop: '3rem', padding: '1.5rem', border: '1px solid var(--border-color)', borderRadius: '8px', background: 'var(--card-bg)' }}>
+              <p style={{ color: 'var(--text-color)', opacity: 0.8, fontSize: '0.95rem', lineHeight: '1.6' }}>
+                <strong style={{ color: 'var(--text-bright)' }}>🔒 Arquivos Confidenciais:</strong> Além dos projetos acima, a agência mantém mais de <strong>{data.privateRepos.count} repositórios privados</strong>. 
+                Estes projetos envolvem {data.privateRepos.summary} operando sob acordos estritos de confidencialidade.
+              </p>
+            </div>
+          )}
         </section>
 
         <section id="about" className="section">
-          <SectionHeader number="02" title="Arquitetura & Ecossistema" />
+          <SectionHeader title="Arquitetura & Ecossistema" />
           <div className="about-content">
             <p className="about-text">
               Este portfólio não é estático. Ele é um ecossistema vivo alimentado por agentes autônomos.

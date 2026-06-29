@@ -49,7 +49,11 @@ function renderTextWithRedaction(text: string) {
   });
 }
 
-export function AgentTerminal() {
+interface AgentTerminalProps {
+  lastUpdate?: string;
+}
+
+export function AgentTerminal({ lastUpdate }: AgentTerminalProps) {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const scrollRef = useRef<HTMLDivElement>(null);
   const lastSender = useRef<string>('Aura Gouveia');
@@ -71,11 +75,23 @@ export function AgentTerminal() {
       return;
     }
 
+    let welcomeText = 'Um novo visitante acaba de acessar o portfólio. Equipe, saúdem o visitante e iniciem o protocolo de monitoramento!';
+    
+    // Check if the portfolio was updated in the last 24 hours
+    if (lastUpdate) {
+      const updateDate = new Date(lastUpdate);
+      const now = new Date();
+      const diffHours = (now.getTime() - updateDate.getTime()) / (1000 * 60 * 60);
+      if (diffHours < 24) {
+        welcomeText = 'Um novo visitante acaba de acessar! Atenção equipe: o chefe sincronizou novos repositórios e atualizou o ecossistema recentemente. Iniciem o protocolo de monitoramento atualizado!';
+      }
+    }
+
     // Recepcionista dá as boas-vindas
     const welcomeMsg = {
       id: Date.now(),
       agent: aura,
-      text: 'Um novo visitante acaba de acessar o portfólio. Equipe, saúdem o visitante e iniciem o protocolo de monitoramento!',
+      text: welcomeText,
       time: new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute:'2-digit' })
     };
     

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "lastUpdate": "2026-06-29T18:54:01.805Z",
-    "source": "Google Sheets (DataOps)"
+    "lastUpdate": "2026-06-29T19:42:16.791Z",
+    "source": "GitHub API Sync"
   },
   "projetos": [],
   "regras": [
@@ -26,5 +26,9 @@
       "descricao": "Agente de segurança e infraestrutura, responsável por monitorar deploys no GitHub Pages, rastrear falhas e manter o sistema sempre online."
     }
   ],
-  "artigos": []
+  "artigos": [],
+  "privateRepos": {
+    "count": 3,
+    "summary": "arquitetura de dados avançada, Inteligência Artificial, processamento em nuvem e automação corporativa com Python e SQL"
+  }
 }
