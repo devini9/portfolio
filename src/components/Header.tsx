@@ -24,7 +24,13 @@ export function Header() {
           <a href="#projects" onClick={(e) => scrollTo(e, 'projects')}>Projetos</a>
           <a href="#about" onClick={(e) => scrollTo(e, 'about')}>Arquitetura</a>
           <a href="#contato" onClick={(e) => scrollTo(e, 'contato')}>Contato</a>
-          <a href="/portfolio/data/curriculo.pdf" target="_blank" rel="noopener noreferrer" className="cv-btn">
+          <a 
+            href="/portfolio/data/curriculo.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="cv-btn"
+            onClick={() => window.dispatchEvent(new CustomEvent('USER_ACTION', { detail: 'CV_DOWNLOAD' }))}
+          >
             [ BAIXAR CV ]
           </a>
         </nav>

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import './AgentTerminal.css';
+import { generateUniqueDialog } from '../utils/dialogGenerator';
 
 type Department = 'cybersec' | 'web' | 'data' | 'editorial' | 'dev' | 'rh';
 
@@ -26,84 +27,15 @@ const AGENTS: AgentDef[] = [
   { name: 'Linus Carvalho', dept: 'dev' },
   { name: 'Clara Nogueira', dept: 'rh' },
   { name: 'Otto Müller', dept: 'rh' },
-  { name: 'Lia Fernandes', dept: 'rh' }
+  { name: 'Lia Fernandes', dept: 'rh' },
+  { name: 'Aura Gouveia', dept: 'rh' } // Recepcionista
 ];
-
-const messagesByDept: Record<Department, string[]> = {
-  cybersec: [
-    'Monitorando tráfego de entrada na porta 443. Tudo limpo.',
-    'Regras de firewall atualizadas. Nenhuma anomalia detectada.',
-    'Achei uma chave exposta: [REDACTED:AKIA_AWS_KEY]. Já ofusquei nos logs.',
-    'Varredura de vulnerabilidades concluída. Zero dependências críticas.',
-    'Auditoria de permissões feita. Os acessos ao Vault estão restritos.',
-    'Bloqueei 3 tentativas de scraping vindas de IPs suspeitos.',
-    'A política de CSP tá redondinha no servidor estático.',
-    'Injetando tarja preta nos endpoints de dados sensíveis.'
-  ],
-  web: [
-    'Componentes re-renderizando a 60fps constantes na página principal.',
-    'Ajustei o padding da seção de projetos no mobile.',
-    'Core Web Vitals voando. O LCP bateu 0.8s.',
-    'O bundle do Vite foi reduzido após ativar o lazy-loading nas imagens.',
-    'Integração do React com o JSON estático sem gargalos.',
-    'Paleta Dark Mode revisada. Contraste nota 100 no Lighthouse.',
-    'Adicionei animações mais suaves na transição de rotas.',
-    'O DOM tá super limpo, removi divs desnecessárias.'
-  ],
-  data: [
-    'Ping no repositório base. Nenhuma alteração detectada no momento.',
-    'Coletando os últimos markdowns do Obsidian.',
-    'Compilação do YAML concluída. Exportando as tags.',
-    'Parse do arquivo finalizado. Convertendo para cerebro.json...',
-    'O GitHub Actions disparou o fluxo de dados em background.',
-    'Tô mantendo a escuta ativa para novos commits do Vinícius.',
-    'Limpando o cache de dados para a próxima varredura.',
-    'Nó de sincronização estável. Latência de 45ms.'
-  ],
-  editorial: [
-    'Revisando a copy da descrição técnica do último projeto.',
-    'Metadatas atualizadas com as novas palavras-chave para o Google.',
-    'Ajeitei a paleta de cores dos ícones para bater com a thumbnail.',
-    'A formatação do markdown tava quebrada, mas já estruturei a tipografia.',
-    'O SEO score dessa página subiu pra 98. Lindo!',
-    'Padronizando os subtítulos das descrições de arquitetura.',
-    'As tags semânticas tão perfeitas pros leitores de tela.',
-    'Finalizei a curadoria visual da galeria de repositórios.'
-  ],
-  dev: [
-    'O pipeline do GitHub Pages acabou de rodar liso.',
-    'Tô arquitetando uma melhoria de cache pra próxima sprint.',
-    'Refatorei aquela função antiga. Código tá bem mais enxuto.',
-    'Os testes E2E passaram. Nenhuma quebra de contrato.',
-    'Tô subindo as métricas dos workers de CI/CD pro dashboard.',
-    'O algoritmo de IA generativa já tá pré-treinado no modelo local.',
-    'Corrigi aquele bug de memória que dava quando minimizava a janela.',
-    'Deploy em produção autorizado. Sistema está 100% online.'
-  ],
-  rh: [
-    'Verificando logs de acesso na aba de contatos...',
-    'O formulário de contato tá com proteção contra spam ativada.',
-    'Atualizando a base de dados do currículo ATS.',
-    'Recebemos um novo ping de visitante na página inicial.',
-    'Gerador de PDF dinâmico está em standby, pronto para emitir o CV.',
-    'A rotina de arquivamento guardou os dados na nuvem segura.',
-    'Tô classificando as últimas interações do portfólio.',
-    'O servidor serverless tá ativo pra lidar com chamadas de recrutadores.'
-  ]
-};
 
 interface ChatMessage {
   id: number;
   agent: AgentDef;
   text: string;
   time: string;
-}
-
-function getRandomMessage(agent: AgentDef, recentMsgs: string[]) {
-  const pool = messagesByDept[agent.dept];
-  const available = pool.filter(msg => !recentMsgs.includes(msg));
-  const finalPool = available.length > 0 ? available : pool;
-  return finalPool[Math.floor(Math.random() * finalPool.length)];
 }
 
 function renderTextWithRedaction(text: string) {
@@ -120,37 +52,54 @@ function renderTextWithRedaction(text: string) {
 export function AgentTerminal() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const recentTexts = useRef<string[]>([]);
-  const lastSender = useRef<string>('José Alcântara');
+  const lastSender = useRef<string>('Aura Gouveia');
+  const messageCountRef = useRef<number>(0);
 
   useEffect(() => {
-    const startAgent = AGENTS.find(a => a.name === 'José Alcântara')!;
-    const initialMsg = {
+    const hour = new Date().getHours();
+    const isWorkingHours = hour >= 6 && hour < 24; // 06:00 to 23:59
+
+    const aura = AGENTS.find(a => a.name === 'Aura Gouveia')!;
+
+    if (!isWorkingHours) {
+      setMessages([{
+        id: Date.now(),
+        agent: aura,
+        text: 'A equipe está descansando agora. Nossos agentes operam das 06:00 até a meia noite. Volte mais tarde!',
+        time: new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute:'2-digit' })
+      }]);
+      return;
+    }
+
+    // Recepcionista dá as boas-vindas
+    const welcomeMsg = {
       id: Date.now(),
-      agent: startAgent,
-      text: 'Opa equipe! Iniciando os pipelines da Agência. Sistema online e monitorado.',
+      agent: aura,
+      text: 'Um novo visitante acaba de acessar o portfólio. Equipe, saúdem o visitante e iniciem o protocolo de monitoramento!',
       time: new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute:'2-digit' })
     };
     
-    setMessages([initialMsg]);
-    recentTexts.current.push(initialMsg.text);
+    setMessages([welcomeMsg]);
+    messageCountRef.current = 1;
 
     let timeoutId: ReturnType<typeof setTimeout>;
 
     const scheduleNextMessage = () => {
-      // Tempo de 2 a 12 segundos entre mensagens
-      const delay = Math.floor(Math.random() * 10000) + 2000;
+      // Limitar a 10 mensagens automáticas por sessão para não poluir
+      if (messageCountRef.current >= 10) return;
+
+      const delay = Math.floor(Math.random() * 8000) + 4000;
 
       timeoutId = setTimeout(() => {
         let nextAgent = AGENTS[Math.floor(Math.random() * AGENTS.length)];
         
-        // Evita repeteco da mesma pessoa
         if (nextAgent.name === lastSender.current) {
            const others = AGENTS.filter(a => a.name !== lastSender.current);
            nextAgent = others[Math.floor(Math.random() * others.length)];
         }
 
-        const text = getRandomMessage(nextAgent, recentTexts.current);
+        // Usar o gerador procedural ao invés da lista fixa
+        const text = generateUniqueDialog(nextAgent.dept);
         
         const newMsg = {
           id: Date.now(),
@@ -159,11 +108,6 @@ export function AgentTerminal() {
           time: new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute:'2-digit' })
         };
 
-        recentTexts.current.push(text);
-        if (recentTexts.current.length > 25) {
-          recentTexts.current.shift();
-        }
-        
         setMessages(prev => {
           const newMsgs = [...prev, newMsg];
           if (newMsgs.length > 25) return newMsgs.slice(newMsgs.length - 25);
@@ -171,12 +115,59 @@ export function AgentTerminal() {
         });
 
         lastSender.current = nextAgent.name;
+        messageCountRef.current += 1;
+        
         scheduleNextMessage();
       }, delay);
     };
 
-    scheduleNextMessage();
-    return () => clearTimeout(timeoutId);
+    // Resposta imediata de outro agente após a saudação de Aura
+    setTimeout(() => {
+      const dev = AGENTS.find(a => a.name === 'José Alcântara')!;
+      setMessages(prev => [...prev, {
+        id: Date.now(),
+        agent: dev,
+        text: 'Seja bem-vindo(a)! Sistemas operando com força total.',
+        time: new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute:'2-digit' })
+      }]);
+      messageCountRef.current += 1;
+      scheduleNextMessage();
+    }, 2000);
+
+    // Event Listener para as Ações do Usuário (Download e Contato)
+    const handleUserAction = (e: Event) => {
+      const customEvent = e as CustomEvent;
+      let text = '';
+      let agentName = '';
+
+      if (customEvent.detail === 'CV_DOWNLOAD') {
+        text = 'Atenção equipe! O visitante acaba de baixar o currículo do Vinícius. Notifiquem o RH para preparar a documentação!';
+        agentName = 'Luna Castro'; // Editorial/Notificações
+      } else if (customEvent.detail === 'CONTACT_SENT') {
+        text = 'Opa! Recebemos um formulário de contato! Verificando os dados inseridos e repassando diretamente para o e-mail do chefe de operações.';
+        agentName = 'Otto Müller'; // RH/Contato
+      }
+
+      if (text && agentName) {
+        const reactingAgent = AGENTS.find(a => a.name === agentName)!;
+        setMessages(prev => {
+          const newMsgs = [...prev, {
+            id: Date.now(),
+            agent: reactingAgent,
+            text,
+            time: new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute:'2-digit' })
+          }];
+          return newMsgs.slice(-25); // Mantém os últimos 25
+        });
+      }
+    };
+
+    window.addEventListener('USER_ACTION', handleUserAction);
+
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener('USER_ACTION', handleUserAction);
+    };
   }, []);
 
   useEffect(() => {

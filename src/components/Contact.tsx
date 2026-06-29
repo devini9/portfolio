@@ -33,6 +33,7 @@ export function Contact() {
       if (data.success === "true" || response.ok) {
         setStatus('✅ Mensagem enviada com sucesso!!.');
         form.reset();
+        window.dispatchEvent(new CustomEvent('USER_ACTION', { detail: 'CONTACT_SENT' }));
       } else {
         setStatus('⚠️ Erro ao enviar. Tente novamente mais tarde.');
       }
