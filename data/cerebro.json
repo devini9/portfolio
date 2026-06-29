@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "lastUpdate": "2026-06-29T19:59:16.299Z",
+    "lastUpdate": "2026-06-29T22:57:38.989Z",
     "source": "GitHub API Sync"
   },
   "projetos": [],
@@ -27,15 +27,11 @@
     }
   ],
   "artigos": [],
-  "privateRepos": {
-    "count": 7,
-    "summary": "arquitetura de dados avançada, Inteligência Artificial, processamento em nuvem e automação corporativa com Python e SQL"
-  },
   "techStats": [
     {
       "language": "Jupyter Notebook",
       "percentage": 29.7,
-      "color": "#8b949e"
+      "color": "#DA5B0B"
     },
     {
       "language": "Shell",
@@ -55,7 +51,7 @@
     {
       "language": "PLSQL",
       "percentage": 4.5,
-      "color": "#8b949e"
+      "color": "#dad8d8"
     },
     {
       "language": "HTML",
@@ -75,12 +71,12 @@
     {
       "language": "Rust",
       "percentage": 0.8,
-      "color": "#8b949e"
+      "color": "#dea584"
     },
     {
       "language": "Batchfile",
       "percentage": 0.2,
-      "color": "#8b949e"
+      "color": "#C1F12E"
     },
     {
       "language": "Dockerfile",
@@ -97,5 +93,9 @@
       "percentage": 0,
       "color": "#8b949e"
     }
-  ]
+  ],
+  "privateRepos": {
+    "count": 7,
+    "summary": "arquitetura de dados avançada, Inteligência Artificial, processamento em nuvem e automação corporativa com Python e SQL"
+  }
 }
