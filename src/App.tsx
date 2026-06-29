@@ -7,6 +7,7 @@ import { ProjectCard } from './components/ProjectCard';
 import { AgentTerminal } from './components/AgentTerminal';
 import { Contact } from './components/Contact';
 import { SkillsMarquee } from './components/SkillsMarquee';
+import { LanguageChart } from './components/LanguageChart';
 
 function App() {
   const [data, setData] = useState<any>(null);
@@ -58,21 +59,13 @@ function App() {
           )}
         </section>
 
-        <section id="about" className="section">
-          <SectionHeader title="Arquitetura & Ecossistema" />
+        <section id="tech-stack" className="section">
+          <SectionHeader title="Tecnologias utilizadas por Vinícius" />
           <div className="about-content">
-            <p className="about-text">
-              Este portfólio não é estático. Ele é um ecossistema vivo alimentado por agentes autônomos.
+            <p className="about-text" style={{ marginBottom: '2rem' }}>
+              Uma visão analítica das linguagens e tecnologias reais utilizadas em todos os repositórios (públicos e privados).
             </p>
-            <ul className="about-list">
-              {data?.regras && data.regras.length > 0 ? (
-                data.regras.map((item: any, idx: number) => (
-                  <li key={idx}><strong>{item.regra}:</strong> {item.descricao}</li>
-                ))
-              ) : (
-                <li><span className="brand-cursor"></span> Sincronizando arquitetura...</li>
-              )}
-            </ul>
+            <LanguageChart stats={data?.techStats} />
           </div>
         </section>
 
