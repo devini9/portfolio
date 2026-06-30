@@ -19,7 +19,7 @@ export function LanguageChart({ stats }: LanguageChartProps) {
     <div className="language-chart-container">
       <div className="language-chart-header">
         <h3 className="language-chart-title">Linguagens & Tecnologias</h3>
-        <span className="language-chart-subtitle">Análise baseada em repositórios do GitHub</span>
+        <span className="language-chart-subtitle">Análise baseada em repositórios (públicos e privados) do Vinícius no <a href="https://github.com/devini9" target="_blank" rel="noreferrer" style={{color: 'inherit', textDecoration: 'underline'}}>GitHub</a></span>
       </div>
       
       <div className="language-progress-bar">

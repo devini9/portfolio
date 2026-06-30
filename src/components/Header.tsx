@@ -16,13 +16,13 @@ export function Header() {
       <div className="header-inner">
         <a href="/" onClick={(e) => scrollTo(e, 'top')} className="brand">
           <span className="brand-prompt">&gt;_</span>
-          <span className="brand-name">Vinícius Vitorino</span>
+          <span className="brand-name">Vinícius Mugnes Ferrira Vitorino</span>
           <span className="brand-cursor"></span>
         </a>
 
         <nav className="header-nav">
+          <a href="#experience" onClick={(e) => scrollTo(e, 'experience')}>Sobre</a>
           <a href="#projects" onClick={(e) => scrollTo(e, 'projects')}>Projetos</a>
-          <a href="#about" onClick={(e) => scrollTo(e, 'about')}>Arquitetura</a>
           <a href="#contato" onClick={(e) => scrollTo(e, 'contato')}>Contato</a>
           <a 
             href="/portfolio/data/curriculo.pdf" 

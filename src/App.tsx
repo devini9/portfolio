@@ -6,9 +6,7 @@ import { SectionHeader } from './components/SectionHeader';
 import { ProjectCard } from './components/ProjectCard';
 import { AgentTerminal } from './components/AgentTerminal';
 import { Contact } from './components/Contact';
-import { SkillsMarquee } from './components/SkillsMarquee';
 import { ExperienceTimeline } from './components/ExperienceTimeline';
-import { LanguageChart } from './components/LanguageChart';
 
 // @ts-ignore
 import cerebroData from '../public/data/cerebro.json';
@@ -27,8 +25,7 @@ function App() {
     <>
       <Header />
       <main className="main-container">
-        <Hero />
-        <SkillsMarquee />
+        <Hero stats={data?.techStats} />
         <ExperienceTimeline />
         <AgentTerminal lastUpdate={data?.metadata?.lastUpdate} />
         
@@ -59,15 +56,7 @@ function App() {
           )}
         </section>
 
-        <section id="tech-stack" className="section">
-          <SectionHeader title="Tecnologias utilizadas por Vinícius" />
-          <div className="about-content">
-            <p className="about-text" style={{ marginBottom: '2rem' }}>
-              Uma visão analítica das linguagens e tecnologias reais utilizadas em todos os repositórios (públicos e privados).
-            </p>
-            <LanguageChart stats={data?.techStats} />
-          </div>
-        </section>
+
 
         <Contact />
 
