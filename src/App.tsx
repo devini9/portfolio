@@ -7,13 +7,14 @@ import { ProjectCard } from './components/ProjectCard';
 import { AgentTerminal } from './components/AgentTerminal';
 import { Contact } from './components/Contact';
 import { SkillsMarquee } from './components/SkillsMarquee';
+import { CompanyLogos } from './components/CompanyLogos';
 import { LanguageChart } from './components/LanguageChart';
 
 // @ts-ignore
 import cerebroData from '../public/data/cerebro.json';
 
 function App() {
-  const data = cerebroData;
+  const data = cerebroData as any;
 
   useEffect(() => {
     if (window.location.hash) {
@@ -28,6 +29,7 @@ function App() {
       <main className="main-container">
         <Hero />
         <SkillsMarquee />
+        <CompanyLogos />
         <AgentTerminal lastUpdate={data?.metadata?.lastUpdate} />
         
         <section id="projects" className="section">
