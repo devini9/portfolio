@@ -7,7 +7,7 @@ import { ProjectCard } from './components/ProjectCard';
 import { AgentTerminal } from './components/AgentTerminal';
 import { Contact } from './components/Contact';
 import { SkillsMarquee } from './components/SkillsMarquee';
-import { CompanyLogos } from './components/CompanyLogos';
+import { ExperienceTimeline } from './components/ExperienceTimeline';
 import { LanguageChart } from './components/LanguageChart';
 
 // @ts-ignore
@@ -29,7 +29,7 @@ function App() {
       <main className="main-container">
         <Hero />
         <SkillsMarquee />
-        <CompanyLogos />
+        <ExperienceTimeline />
         <AgentTerminal lastUpdate={data?.metadata?.lastUpdate} />
         
         <section id="projects" className="section">
