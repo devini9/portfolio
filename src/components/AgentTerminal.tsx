@@ -69,7 +69,7 @@ export function AgentTerminal({ lastUpdate }: AgentTerminalProps) {
       setMessages([{
         id: Date.now(),
         agent: aura,
-        text: 'A equipe está descansando agora. Nossos agentes operam das 06:00 até a meia noite. Volte mais tarde!',
+        text: 'A equipe está descansando agora. Nossos agentes operam das 06:00 até as 00:00. Desde já agradecemos sua atenção!',
         time: new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute:'2-digit' })
       }]);
       return;
