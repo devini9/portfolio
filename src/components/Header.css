@@ -62,9 +62,18 @@
   color: var(--text-main);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 1rem;
+  }
   .header-nav {
-    display: none; /* Em um site real teríamos um menu hambúrguer */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .cv-btn {
+    margin-left: 0;
   }
 }
 
