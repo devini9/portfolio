@@ -21,10 +21,18 @@
 .brand {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   font-family: var(--font-mono);
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--brand-color);
+  max-width: 100%;
+}
+@media (max-width: 600px) {
+  .brand {
+    font-size: 0.95rem;
+    justify-content: center;
+  }
 }
 
 .brand-prompt {

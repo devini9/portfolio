@@ -25,6 +25,11 @@
   padding: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 body {
   background-color: var(--bg-color);
   background-image: radial-gradient(var(--line-color) 1px, transparent 1px);
