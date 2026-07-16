@@ -13,7 +13,7 @@
 .project-card:hover {
   background: var(--bg-surface-hover);
   transform: translateY(-4px);
-  border-color: #a0aec0;
+  border-color: var(--color-salmon);
 }
 
 .project-title {
@@ -39,7 +39,7 @@
 .tag {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  color: var(--text-main);
+  color: #0a0c10;
   background: var(--color-moss);
   padding: 0.2rem 0.6rem;
   border-radius: 2px;

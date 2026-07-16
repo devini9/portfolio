@@ -47,7 +47,7 @@ function App() {
           
           {/* Private Repos Note will go here */}
           {data?.privateRepos && (
-            <div className="private-repos-note" style={{ marginTop: '2rem', padding: '1.5rem', backgroundColor: 'rgba(255, 255, 255, 0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+            <div className="private-repos-note" style={{ marginTop: '2rem', padding: '1.5rem', backgroundColor: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: '8px', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
               <p style={{ color: 'var(--text-color)', opacity: 0.8, fontSize: '0.95rem', lineHeight: '1.6' }}>
                 <strong style={{ color: 'var(--text-bright)' }}>🔒 Arquivos Confidenciais:</strong> Além dos projetos acima, a agência mantém mais de <strong>{data.privateRepos.count} repositórios privados</strong>. 
                 Estes projetos envolvem {data.privateRepos.summary} operando sob acordos estritos de confidencialidade.

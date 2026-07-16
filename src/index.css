@@ -1,22 +1,77 @@
 :root {
+  /* Default: Tema Escuro Cyberpunk */
+  --bg-color: #0a0c10;
+  --bg-surface: #141820;
+  --bg-surface-hover: #1c2130;
+  
+  --text-main: #e4e7ec;
+  --text-bright: #f0f4ff;
+  --text-muted: #8892a4;
+  --text-color: #c0c8d8;
+  
+  --bg-card: #141820;
+  --border-color: #2a3040;
+  --line-color: #252d3e;
+  
+  --color-salmon: #ff7d5a;
+  --color-moss: #7db84a;
+  
+  --brand-color: var(--color-salmon);
+  --brand-color-rgb: 232, 122, 93;
+
+  /* Component-specific variables */
+  --bg-header: rgba(10, 12, 16, 0.85);
+  --bg-chat: rgba(10, 12, 16, 0.9);
+  --bg-chat-header: rgba(20, 24, 32, 0.95);
+  --bg-redacted: #1a1f2e;
+  --bg-redacted-hover: #252d3e;
+  --bg-chat-mobile: #0a0c10;
+  --color-scrollbar-thumb: #3a4050;
+  --color-scrollbar-thumb-hover: #4a5060;
+  --bg-input: #1a1f2e;
+  --bg-progress-track: #1a1f2e;
+  --border-card-hover: var(--color-salmon);
+  --text-tag: #0a0c10;
+  
+  /* Fontes */
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'Space Grotesk', sans-serif;
+}
+
+:root[data-theme="light"] {
   /* Tema Claro e Frio */
   --bg-color: #f4f6f9;
   --bg-surface: #ffffff;
   --bg-surface-hover: #eef2f6;
   
   --text-main: #2d3748;
+  --text-bright: #1a202c;
   --text-muted: #718096;
+  --text-color: #4a5568;
   
-  /* Cores de Destaque (Originais quentes) */
+  --bg-card: #ffffff;
+  --border-color: #cbd5e0;
+  --line-color: #e2e8f0;
+  
   --color-salmon: #E87A5D;
   --color-moss: #4A5D23;
   
   --brand-color: var(--color-salmon);
-  --line-color: #e2e8f0;
-  
-  /* Fontes */
-  --font-mono: 'JetBrains Mono', monospace;
-  --font-sans: 'Space Grotesk', sans-serif;
+  --brand-color-rgb: 232, 122, 93;
+
+  /* Component-specific variables */
+  --bg-header: rgba(255, 255, 255, 0.85);
+  --bg-chat: rgba(255, 255, 255, 0.9);
+  --bg-chat-header: rgba(247, 250, 252, 0.95);
+  --bg-redacted: #e2e8f0;
+  --bg-redacted-hover: #cbd5e0;
+  --bg-chat-mobile: #ffffff;
+  --color-scrollbar-thumb: #cbd5e0;
+  --color-scrollbar-thumb-hover: #a0aec0;
+  --bg-input: #ffffff;
+  --bg-progress-track: #e2e8f0;
+  --border-card-hover: var(--color-moss);
+  --text-tag: #ffffff;
 }
 
 * {
@@ -49,11 +104,11 @@ body {
   background: var(--bg-color);
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e0;
+  background: var(--color-scrollbar-thumb);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #a0aec0;
+  background: var(--color-scrollbar-thumb-hover);
 }
 
 a {
