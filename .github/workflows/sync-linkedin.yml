@@ -1,0 +1,56 @@
+name: Sync LinkedIn Data
+
+on:
+  workflow_dispatch:
+    inputs:
+      linkedin_zip:
+        description: 'Caminho do arquivo ZIP do LinkedIn no repo (ex: data/linkedin.zip)'
+        required: false
+        default: 'data/linkedin.zip'
+
+permissions:
+  contents: write
+
+jobs:
+  sync-linkedin:
+    name: Sincronizar dados do LinkedIn
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verificar se ZIP do LinkedIn existe
+        id: check-zip
+        run: |
+          if [ -f "${{ github.event.inputs.linkedin_zip }}" ]; then
+            echo "found=true" >> $GITHUB_OUTPUT
+          else
+            echo "found=false" >> $GITHUB_OUTPUT
+            echo "⚠️ Arquivo ZIP do LinkedIn não encontrado em ${{ github.event.inputs.linkedin_zip }}"
+            echo "Para usar este workflow:"
+            echo "  1. Baixe seus dados em https://www.linkedin.com/mypreferences/d/download-my-data"
+            echo "  2. Coloque o ZIP em ${{ github.event.inputs.linkedin_zip }}"
+            echo "  3. Execute este workflow novamente"
+          fi
+
+      - name: Parsear LinkedIn
+        if: steps.check-zip.outputs.found == 'true'
+        run: python scripts/sync-linkedin.py ${{ github.event.inputs.linkedin_zip }}
+
+      - name: Commitar dados atualizados
+        if: steps.check-zip.outputs.found == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/cerebro.json
+          if git diff --cached --quiet; then
+            echo "Nenhuma mudança para commitar."
+          else
+            git commit -m "data: sincronização automática com LinkedIn"
+            git push
+          fi

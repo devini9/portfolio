@@ -1,0 +1,40 @@
+name: Sync Portfolio Data
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Todo dia às 06:00 UTC
+  workflow_dispatch:      # Permite trigger manual
+
+permissions:
+  contents: write
+
+jobs:
+  sync-github:
+    name: Sincronizar dados do GitHub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Sincronizar repositórios
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: devini9
+        run: python scripts/sync-github.py
+
+      - name: Commitar dados atualizados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/cerebro.json
+          if git diff --cached --quiet; then
+            echo "Nenhuma mudança para commitar."
+          else
+            git commit -m "data: sincronização automática com GitHub API"
+            git push
+          fi

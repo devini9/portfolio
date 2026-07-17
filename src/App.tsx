@@ -25,7 +25,7 @@ function App() {
       <Header />
       <main className="main-container">
         <Hero stats={data?.techStats} />
-        <ExperienceTimeline />
+        <ExperienceTimeline linkedinExperiences={data?.linkedin?.experiences} />
 
         <section id="projects" className="section">
           <SectionHeader title="Projetos em Destaque" />
