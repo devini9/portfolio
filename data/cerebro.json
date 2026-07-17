@@ -1,101 +1,22 @@
 {
   "metadata": {
     "lastUpdate": "2026-07-17T17:48:42.433Z",
-    "source": "Google Sheets (DataOps) & GitHub API"
+    "source": "GitHub API + LinkedIn",
+    "githubUser": "devini9",
+    "linkedinSynced": false
   },
   "projetos": [],
-  "regras": [
-    {
-      "regra": "Agent Hermes",
-      "descricao": "Agente encarregado de buscar dados do GitHub e Google Sheets e orquestrar a sincronização contínua com a base do ecossistema."
-    },
-    {
-      "regra": "Agent Clara",
-      "descricao": "Agente de inteligência e compliance que verifica a qualidade dos dados e garante que o tom das respostas seja amigável e profissional."
-    },
-    {
-      "regra": "Agent Otto",
-      "descricao": "Agente projetado para otimização e processos de retaguarda, lidando com tarefas automatizadas pesadas e rotinas de backup."
-    },
-    {
-      "regra": "Agent Pixel",
-      "descricao": "Agente especialista em interface gráfica, responsável por gerar layouts, manter a identidade visual e implementar melhorias de design."
-    },
-    {
-      "regra": "Agent Aegis",
-      "descricao": "Agente de segurança e infraestrutura, responsável por monitorar deploys no GitHub Pages, rastrear falhas e manter o sistema sempre online."
-    }
-  ],
-  "artigos": [],
-  "techStats": [
-    {
-      "language": "Jupyter Notebook",
-      "percentage": 29.4,
-      "color": "#DA5B0B"
-    },
-    {
-      "language": "Shell",
-      "percentage": 24.4,
-      "color": "#89e051"
-    },
-    {
-      "language": "JavaScript",
-      "percentage": 21.3,
-      "color": "#f1e05a"
-    },
-    {
-      "language": "Python",
-      "percentage": 12.8,
-      "color": "#3572A5"
-    },
-    {
-      "language": "PLSQL",
-      "percentage": 4.5,
-      "color": "#dad8d8"
-    },
-    {
-      "language": "HTML",
-      "percentage": 3.6,
-      "color": "#e34c26"
-    },
-    {
-      "language": "TypeScript",
-      "percentage": 2,
-      "color": "#3178c6"
-    },
-    {
-      "language": "CSS",
-      "percentage": 0.8,
-      "color": "#563d7c"
-    },
-    {
-      "language": "Rust",
-      "percentage": 0.8,
-      "color": "#dea584"
-    },
-    {
-      "language": "Batchfile",
-      "percentage": 0.2,
-      "color": "#C1F12E"
-    },
-    {
-      "language": "Dockerfile",
-      "percentage": 0.1,
-      "color": "#384d54"
-    },
-    {
-      "language": "Go",
-      "percentage": 0.1,
-      "color": "#00ADD8"
-    },
-    {
-      "language": "Makefile",
-      "percentage": 0,
-      "color": "#8b949e"
-    }
-  ],
+  "techStats": [],
   "privateRepos": {
     "count": 8,
     "summary": "arquitetura de dados avançada, Inteligência Artificial, processamento em nuvem e automação corporativa com Python e SQL"
+  },
+  "linkedin": {
+    "profile": {},
+    "experiences": [],
+    "education": [],
+    "skills": [],
+    "certifications": [],
+    "syncedAt": null
   }
 }
