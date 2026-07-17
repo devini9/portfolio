@@ -33,7 +33,6 @@ export function Contact() {
       if (data.success === "true" || response.ok) {
         setStatus('✅ Mensagem enviada com sucesso!!.');
         form.reset();
-        window.dispatchEvent(new CustomEvent('USER_ACTION', { detail: 'CONTACT_SENT' }));
       } else {
         setStatus('⚠️ Erro ao enviar. Tente novamente mais tarde.');
       }
@@ -50,7 +49,7 @@ export function Contact() {
         <div className="contact-grid">
           <div className="contact-info">
             <p style={{ fontSize: '1.2rem', lineHeight: '1.8' }}>
-              Os agentes de Atendimento estam prontos para receber 
+              Os agentes de Atendimento estão prontos para receber 
               sua mensagem e redirecioná-la diretamente para o Vinícius.
             </p>
             <div className="contact-methods">
@@ -81,7 +80,7 @@ export function Contact() {
               Enviar
             </button>
             
-            {status && <div className="form-status">{status}</div>}
+            {status && <div className="form-status" role="alert">{status}</div>}
           </form>
         </div>
       </div>

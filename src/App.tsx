@@ -4,7 +4,6 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { SectionHeader } from './components/SectionHeader';
 import { ProjectCard } from './components/ProjectCard';
-import { AgentTerminal } from './components/AgentTerminal';
 import { Contact } from './components/Contact';
 import { ExperienceTimeline } from './components/ExperienceTimeline';
 
@@ -27,8 +26,7 @@ function App() {
       <main className="main-container">
         <Hero stats={data?.techStats} />
         <ExperienceTimeline />
-        <AgentTerminal lastUpdate={data?.metadata?.lastUpdate} />
-        
+
         <section id="projects" className="section">
           <SectionHeader title="Projetos em Destaque" />
           <div className="section-lead">
@@ -55,8 +53,6 @@ function App() {
             </div>
           )}
         </section>
-
-
 
         <Contact />
 

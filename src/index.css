@@ -21,11 +21,6 @@
 
   /* Component-specific variables */
   --bg-header: rgba(10, 12, 16, 0.85);
-  --bg-chat: rgba(10, 12, 16, 0.9);
-  --bg-chat-header: rgba(20, 24, 32, 0.95);
-  --bg-redacted: #1a1f2e;
-  --bg-redacted-hover: #252d3e;
-  --bg-chat-mobile: #0a0c10;
   --color-scrollbar-thumb: #3a4050;
   --color-scrollbar-thumb-hover: #4a5060;
   --bg-input: #1a1f2e;
@@ -61,11 +56,6 @@
 
   /* Component-specific variables */
   --bg-header: rgba(255, 255, 255, 0.85);
-  --bg-chat: rgba(255, 255, 255, 0.9);
-  --bg-chat-header: rgba(247, 250, 252, 0.95);
-  --bg-redacted: #e2e8f0;
-  --bg-redacted-hover: #cbd5e0;
-  --bg-chat-mobile: #ffffff;
   --color-scrollbar-thumb: #cbd5e0;
   --color-scrollbar-thumb-hover: #a0aec0;
   --bg-input: #ffffff;
@@ -83,6 +73,18 @@
 html, body {
   overflow-x: hidden;
   max-width: 100vw;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 body {

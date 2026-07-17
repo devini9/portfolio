@@ -4,12 +4,7 @@
   padding: 0 2rem;
 }
 
-/* Evita que o texto encoste no chat em telas maiores */
-@media (min-width: 1024px) {
-  .main-container {
-    padding-right: 440px; /* 400px do chat + margens */
-  }
-}
+
 
 .section {
   padding: 3rem 0;
@@ -86,10 +81,6 @@
   }
   .project-grid {
     grid-template-columns: 1fr;
-  }
-  /* Espaço no rodapé para o chat mobile que fica 100% de largura */
-  .site-footer {
-    padding-bottom: 280px; 
   }
 }
 

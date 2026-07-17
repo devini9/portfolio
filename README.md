@@ -1,73 +1,64 @@
-# React + TypeScript + Vite
+# Portfólio devini9
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio pessoal de **Vinícius Mugnes Ferrira Vitorino** — Cientista de Dados & Especialista em IA.
 
-Currently, two official plugins are available:
+## Sobre
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Site institucional que apresenta minha trajetória profissional, projetos, stack de tecnologias e canal de contato direto. O ecossistema é mantido e atualizado por agentes de IA que sincronizam dados do GitHub e Google Sheets automaticamente.
 
-## React Compiler
+## Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Tema claro/escuro** com detecção automática de preferência do sistema
+- **Timeline de experiência profissional** com animações suaves
+- **Gráfico de linguagens** baseado nos repositórios do GitHub
+- **Marquee de skills** com scroll infinito
+- **Formulário de contato** integrado ao FormSubmit
+- **Download de currículo** em PDF
+- **Layout responsivo** para desktop e mobile
 
-## Expanding the ESLint configuration
+## Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19 + TypeScript
+- Vite 8
+- CSS puro (sem frameworks)
+- GitHub Pages (deploy via `gh-pages`)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Como rodar
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+```bash
+# Instalar dependências
+npm install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Iniciar servidor de desenvolvimento
+npm run dev
+
+# Build para produção
+npm run build
+
+# Deploy no GitHub Pages
+npm run deploy
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Estrutura
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── components/
+│   ├── Header.tsx        # Navegação fixa com toggle de tema
+│   ├── Hero.tsx          # Apresentação e gráfico de linguagens
+│   ├── ExperienceTimeline.tsx  # Linha do tempo profissional
+│   ├── Contact.tsx       # Formulário de contato
+│   ├── LanguageChart.tsx # Gráfico de barras de linguagens
+│   ├── ProjectCard.tsx   # Card de projeto
+│   ├── SectionHeader.tsx # Título de seção com linha decorativa
+│   └── SkillsMarquee.tsx # Marquee de habilidades
+├── utils/
+├── App.tsx
+├── index.css             # Variáveis CSS e estilos globais
+└── main.tsx
+```
+
+## Contato
+
+- **Email:** viniciusfv.9@gmail.com
+- **GitHub:** [github.com/devini9](https://github.com/devini9)

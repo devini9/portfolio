@@ -47,7 +47,6 @@ export function Header() {
             target="_blank" 
             rel="noopener noreferrer" 
             className="cv-btn"
-            onClick={() => window.dispatchEvent(new CustomEvent('USER_ACTION', { detail: 'CV_DOWNLOAD' }))}
           >
             [ BAIXAR CV ]
           </a>
