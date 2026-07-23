@@ -1,86 +1,35 @@
 {
   "metadata": {
-    "lastUpdate": "2026-07-23T22:45:17.107Z",
-    "source": "GitHub API"
+    "lastUpdate": "2026-07-23T23:43:50.318Z",
+    "source": "Google Sheets (DataOps) & GitHub API"
   },
-  "projetos": [
+  "projetos": [],
+  "regras": [
     {
-      "id": 1282386144,
-      "name": "portfolio",
-      "description": "Sem descrição",
-      "url": "https://github.com/devini9/portfolio",
-      "language": "HTML",
-      "stars": 0,
-      "forks": 0,
-      "topics": [],
-      "updated_at": "2026-07-23T21:52:21Z"
+      "regra": "Agent Hermes",
+      "descricao": "Agente encarregado de buscar dados do GitHub e Google Sheets e orquestrar a sincronização contínua com a base do ecossistema."
+    },
+    {
+      "regra": "Agent Clara",
+      "descricao": "Agente de inteligência e compliance que verifica a qualidade dos dados e garante que o tom das respostas seja amigável e profissional."
+    },
+    {
+      "regra": "Agent Otto",
+      "descricao": "Agente projetado para otimização e processos de retaguarda, lidando com tarefas automatizadas pesadas e rotinas de backup."
+    },
+    {
+      "regra": "Agent Pixel",
+      "descricao": "Agente especialista em interface gráfica, responsável por gerar layouts, manter a identidade visual e implementar melhorias de design."
+    },
+    {
+      "regra": "Agent Aegis",
+      "descricao": "Agente de segurança e infraestrutura, responsável por monitorar deploys no GitHub Pages, rastrear falhas e manter o sistema sempre online."
     }
   ],
   "artigos": [],
-  "techStats": [
-    {
-      "language": "Jupyter Notebook",
-      "bytes": 223965,
-      "percentage": 29,
-      "color": "#DA5B0B"
-    },
-    {
-      "language": "Shell",
-      "bytes": 185617,
-      "percentage": 24,
-      "color": "#89e051"
-    },
-    {
-      "language": "JavaScript",
-      "bytes": 162004,
-      "percentage": 21,
-      "color": "#f1e05a"
-    },
-    {
-      "language": "Python",
-      "bytes": 97579,
-      "percentage": 13,
-      "color": "#3572A5"
-    },
-    {
-      "language": "PLSQL",
-      "bytes": 34276,
-      "percentage": 4,
-      "color": "#6e7681"
-    },
-    {
-      "language": "HTML",
-      "bytes": 28033,
-      "percentage": 4,
-      "color": "#e34c26"
-    },
-    {
-      "language": "TypeScript",
-      "bytes": 15536,
-      "percentage": 2,
-      "color": "#3178c6"
-    },
-    {
-      "language": "CSS",
-      "bytes": 6174,
-      "percentage": 1,
-      "color": "#563d7c"
-    },
-    {
-      "language": "Rust",
-      "bytes": 5957,
-      "percentage": 1,
-      "color": "#dea584"
-    },
-    {
-      "language": "Batchfile",
-      "bytes": 1460,
-      "percentage": 0,
-      "color": "#6e7681"
-    }
-  ],
+  "techStats": [],
   "privateRepos": {
-    "count": 8,
-    "summary": "arquitetura de dados avançada, automação de processos e desenvolvimento de agentes de IA"
+    "count": 0,
+    "summary": "arquitetura de dados avançada"
   }
 }
