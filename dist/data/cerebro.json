@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "lastUpdate": "2026-07-24T01:12:44.914Z",
+    "source": "Google Sheets (DataOps) & GitHub API"
+  },
+  "projetos": [],
+  "regras": [
+    {
+      "regra": "Agent Hermes",
+      "descricao": "Agente encarregado de buscar dados do GitHub e Google Sheets e orquestrar a sincronização contínua com a base do ecossistema."
+    },
+    {
+      "regra": "Agent Clara",
+      "descricao": "Agente de inteligência e compliance que verifica a qualidade dos dados e garante que o tom das respostas seja amigável e profissional."
+    },
+    {
+      "regra": "Agent Otto",
+      "descricao": "Agente projetado para otimização e processos de retaguarda, lidando com tarefas automatizadas pesadas e rotinas de backup."
+    },
+    {
+      "regra": "Agent Pixel",
+      "descricao": "Agente especialista em interface gráfica, responsável por gerar layouts, manter a identidade visual e implementar melhorias de design."
+    },
+    {
+      "regra": "Agent Aegis",
+      "descricao": "Agente de segurança e infraestrutura, responsável por monitorar deploys no GitHub Pages, rastrear falhas e manter o sistema sempre online."
+    }
+  ],
+  "artigos": [],
+  "techStats": [],
+  "privateRepos": {
+    "count": 0,
+    "summary": "arquitetura de dados avançada"
+  }
+}
