@@ -116,8 +116,10 @@ def calculate_tech_stats(repos: list) -> list:
 def build_project_list(repos: list) -> list:
     """Constrói a lista de projetos para exibição."""
     projetos = []
+    private_projetos = []
+
     for repo in repos:
-        if repo.get("private") or repo["name"] in EXCLUDE_REPOS:
+        if repo["name"] in EXCLUDE_REPOS:
             continue
         if repo.get("fork") or repo.get("archived"):
             continue
@@ -126,7 +128,7 @@ def build_project_list(repos: list) -> list:
         if repo.get("topics"):
             tags.extend(repo["topics"][:5])
 
-        projetos.append({
+        project_data = {
             "id": repo["name"],
             "frontmatter": {
                 "title": repo["name"].replace("-", " ").replace("_", " ").title(),
@@ -135,9 +137,21 @@ def build_project_list(repos: list) -> list:
                 "stars": repo.get("stargazers_count", 0),
                 "forks": repo.get("forks_count", 0),
                 "updated": repo.get("updated_at", ""),
+                "private": repo.get("private", False),
             },
             "content": repo.get("description") or "Sem descrição disponível.",
-        })
+        }
+
+        if repo.get("private"):
+            private_projetos.append(project_data)
+        else:
+            projetos.append(project_data)
+
+    # Mostra repositórios privados com indicação de confidencialidade
+    for proj in private_projetos[:5]:  # Limita a 5 para não expor muito
+        proj["frontmatter"]["title"] = f"🔒 {proj['frontmatter']['title']}"
+        proj["content"] = "[Projeto Confidencial] " + (proj["content"] or "Detalhes sob NDA.")
+        projetos.append(proj)
 
     projetos.sort(key=lambda x: x["frontmatter"].get("stars", 0), reverse=True)
     return projetos

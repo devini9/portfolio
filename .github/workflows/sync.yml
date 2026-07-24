@@ -23,7 +23,7 @@ jobs:
 
       - name: Sincronizar repositórios
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_PAT }}
           GITHUB_USERNAME: devini9
         run: python scripts/sync-github.py
 
