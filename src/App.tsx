@@ -1,11 +1,13 @@
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import './App.css';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { SectionHeader } from './components/SectionHeader';
 import { ProjectCard } from './components/ProjectCard';
-import { Contact } from './components/Contact';
-import { ExperienceTimeline } from './components/ExperienceTimeline';
+
+// Lazy loading para componentes não críticos
+const Contact = lazy(() => import('./components/Contact').then(mod => ({ default: mod.Contact })));
+const ExperienceTimeline = lazy(() => import('./components/ExperienceTimeline').then(mod => ({ default: mod.ExperienceTimeline })));
 
 // @ts-ignore
 import cerebroData from '../public/data/cerebro.json';
@@ -25,7 +27,10 @@ function App() {
       <Header />
       <main className="main-container">
         <Hero stats={data?.techStats} />
-        <ExperienceTimeline linkedinExperiences={data?.linkedin?.experiences} />
+
+        <Suspense fallback={<div className="loading"><span className="brand-cursor"></span> Carregando experiências...</div>}>
+          <ExperienceTimeline linkedinExperiences={data?.linkedin?.experiences} />
+        </Suspense>
 
         <section id="projects" className="section">
           <SectionHeader title="Projetos em Destaque" />
@@ -54,7 +59,9 @@ function App() {
           )}
         </section>
 
-        <Contact />
+        <Suspense fallback={<div className="loading"><span className="brand-cursor"></span> Carregando contato...</div>}>
+          <Contact />
+        </Suspense>
 
       </main>
 

@@ -5,6 +5,8 @@ interface ProjetoData {
   frontmatter: {
     title?: string;
     tags?: string[];
+    repo_url?: string;
+    demo_url?: string;
     [key: string]: any;
   };
   content: string;
@@ -17,7 +19,9 @@ interface ProjectCardProps {
 export function ProjectCard({ project }: ProjectCardProps) {
   const name = project.frontmatter.title || project.id;
   const tags = project.frontmatter.tags || [];
-  
+  const repoUrl = project.frontmatter.repo_url || `https://github.com/devini9/${project.id}`;
+  const demoUrl = project.frontmatter.demo_url;
+
   const snippet = project.content
     ? project.content.substring(0, 150).replace(/#/g, '').trim() + '...'
     : 'Sem descrição disponível.';
@@ -36,9 +40,25 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </div>
       
       <div className="project-links">
-        <a href="#" className="text-link" onClick={(e) => { e.preventDefault(); alert('Em breve: Ver Detalhes'); }}>
-          Ver detalhes
+        <a
+          href={repoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-link"
+        >
+          Ver no GitHub →
         </a>
+        {demoUrl && (
+          <a
+            href={demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-link"
+            style={{ marginLeft: '1rem' }}
+          >
+          Demo →
+          </a>
+        )}
       </div>
     </article>
   );
