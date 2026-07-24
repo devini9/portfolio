@@ -60,6 +60,11 @@
     <!-- PWA Manifest -->
     <link rel="manifest" href="/portfolio/manifest.json" />
 
+    <!-- Cache busting: HTML nunca fica cacheado -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
     <!-- CSP - Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.github.com https://formsubmit.co; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co;">
 

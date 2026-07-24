@@ -9,6 +9,8 @@ import { ProjectCard } from './components/ProjectCard';
 const Contact = lazy(() => import('./components/Contact').then(mod => ({ default: mod.Contact })));
 const ExperienceTimeline = lazy(() => import('./components/ExperienceTimeline').then(mod => ({ default: mod.ExperienceTimeline })));
 
+declare const __BUILD_TIME__: number;
+
 function App() {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -20,9 +22,9 @@ function App() {
     }
     window.scrollTo(0, 0);
 
-    // Detecta base path automaticamente (GitHub Pages = /portfolio/)
+    // Cache busting: cada build gera um timestamp novo, forçando reload do JSON
     const base = import.meta.env.BASE_URL || '/';
-    const jsonUrl = `${base}data/cerebro.json`;
+    const jsonUrl = `${base}data/cerebro.json?v=${__BUILD_TIME__}`;
 
     fetch(jsonUrl)
       .then(res => {
