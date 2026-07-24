@@ -7,6 +7,7 @@ interface ProjetoData {
     tags?: string[];
     repo_url?: string;
     demo_url?: string;
+    private?: boolean;
     [key: string]: any;
   };
   content: string;
@@ -21,14 +22,15 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const tags = project.frontmatter.tags || [];
   const repoUrl = project.frontmatter.repo_url || `https://github.com/devini9/${project.id}`;
   const demoUrl = project.frontmatter.demo_url;
+  const isPrivate = project.frontmatter.private || false;
 
   const snippet = project.content
     ? project.content.substring(0, 150).replace(/#/g, '').trim() + '...'
     : 'Sem descrição disponível.';
 
   return (
-    <article className="project-card reveal">
-      <div className="project-content">
+    <article className={`project-card reveal ${isPrivate ? 'project-card-private' : ''}`}>
+      <div className={`project-content ${isPrivate ? 'project-content-blur' : ''}`}>
         <h3 className="project-title">{name}</h3>
         <p className="project-description">{snippet}</p>
         
@@ -38,6 +40,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </div>
       </div>
+
+      {isPrivate && (
+        <div className="project-private-overlay">
+          <span className="private-badge">🔒 PROJETO CONFIDENCIAL</span>
+        </div>
+      )}
       
       <div className="project-links">
         <a
@@ -56,7 +64,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             className="text-link"
             style={{ marginLeft: '1rem' }}
           >
-          Demo →
+            Demo →
           </a>
         )}
       </div>

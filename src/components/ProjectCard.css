@@ -53,3 +53,41 @@
   font-family: var(--font-mono);
   font-size: 0.85rem;
 }
+
+/* Estilos para projetos privados */
+.project-card-private {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-content-blur {
+  filter: blur(4px);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.project-card-private:hover .project-content-blur {
+  filter: blur(0);
+  opacity: 1;
+}
+
+.project-private-overlay {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(232, 122, 93, 0.9);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  backdrop-filter: blur(2px);
+  z-index: 2;
+}
+
+.private-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
