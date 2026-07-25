@@ -76,7 +76,22 @@ def get_all_repos() -> list:
     page = 1
     while True:
         url = f"https://api.github.com/user/repos?sort=updated&per_page=100&page={page}"
-        repos = github_request(url)
+        try:
+            repos = github_request(url)
+        except urllib.error.HTTPError as e:
+            if e.code == 403:
+                print(f"  ⚠️  Acesso negado à página {page} (token sem permissão para repos privados)")
+                # Fallback: tenta buscar só públicos
+                if not all_repos:
+                    url_public = f"https://api.github.com/user/repos?sort=updated&per_page=100&page={page}&visibility=public"
+                    try:
+                        repos = github_request(url_public)
+                    except urllib.error.HTTPError:
+                        break
+                else:
+                    break
+            else:
+                raise
         if not repos:
             break
         all_repos.extend(repos)
@@ -183,13 +198,13 @@ def main():
     repos = get_all_repos()
     print(f"  📦 {len(repos)} repositórios encontrados")
 
-    # Calcular stats
+    # Calcular stats (apenas de repos acessíveis)
     tech_stats = calculate_tech_stats(repos)
     print(f"  📊 {len(tech_stats)} linguagens mapeadas")
 
-    # Construir projetos
+    # Construir projetos (inclui privados com blur)
     projetos = build_project_list(repos)
-    print(f"  🗂️  {len(projetos)} projetos públicos para exibição")
+    print(f"  🗂️  {len(projetos)} projetos para exibição")
 
     # Contar privados
     private_count = sum(1 for r in repos if r.get("private"))
