@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist -r https://github.com/devini9/portfolio.git",
-    "sync": "node --env-file=.env scripts/sync-github.js",
+    "sync": "python3 scripts/sync-github.py",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage"
