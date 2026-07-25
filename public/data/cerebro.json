@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "lastUpdate": "2026-07-25T02:50:58.952477+00:00",
+    "lastUpdate": "2026-07-25T03:02:02.145241+00:00",
     "source": "GitHub API",
     "githubUser": "devini9",
     "githubName": "Vinicius Mugnes Ferreira Vitorino",
@@ -22,7 +22,7 @@
         "updated": "2026-07-25T02:49:44Z",
         "private": false
       },
-      "content": "Sem descrição disponível."
+      "content": "Cliente desktop para Foundry VTT com Tauri v2. Multiplataforma (Windows/Linux/macOS), credenciais seguras, customização de temas e cache."
     },
     {
       "id": "pj-vento",
@@ -35,7 +35,7 @@
         "updated": "2026-07-03T20:47:45Z",
         "private": true
       },
-      "content": "[Projeto Confidencial] Sem descrição disponível."
+      "content": "[Projeto Confidencial] Infraestrutura de banco de dados e integração para logística internacional. SQL Server, pipelines de dados, dashboards BI e auditoria."
     },
     {
       "id": "estudos_FIAP",
@@ -50,7 +50,7 @@
         "updated": "2026-05-28T18:14:41Z",
         "private": true
       },
-      "content": "[Projeto Confidencial] Sem descrição disponível."
+      "content": "[Projeto Confidencial] Portfólio de estudos do curso de Ciência de Dados da FIAP. Projetos com Python, SQL, Machine Learning e Análise de Negócio."
     },
     {
       "id": "gestor_de_carga",
@@ -65,7 +65,7 @@
         "updated": "2026-05-28T18:14:41Z",
         "private": true
       },
-      "content": "[Projeto Confidencial] Um monitor de filas do Azure Service Bus em Python para análise de carga e sugestão de auto-scaling de workers."
+      "content": "[Projeto Confidencial] Agente de monitoramento e auto-scaling para Azure Service Bus. Python, Docker Swarm, métricas em tempo real e relatórios."
     },
     {
       "id": "estudos_deVini-9",
@@ -80,7 +80,7 @@
         "updated": "2026-05-28T18:14:40Z",
         "private": true
       },
-      "content": "[Projeto Confidencial] Sem descrição disponível."
+      "content": "[Projeto Confidencial] Repositório de estudos e experimentos com Jupyter Notebook, Python e Ciência de Dados."
     },
     {
       "id": "discord-bot",
@@ -95,7 +95,7 @@
         "updated": "2026-05-28T18:14:40Z",
         "private": true
       },
-      "content": "[Projeto Confidencial] Sem descrição disponível."
+      "content": "[Projeto Confidencial] Bot para Discord desenvolvido em Python com automação e integrações."
     }
   ],
   "regras": [
@@ -139,7 +139,7 @@
     },
     {
       "language": "Python",
-      "percentage": 12.7,
+      "percentage": 12.6,
       "color": "#3572A5"
     },
     {
@@ -149,7 +149,7 @@
     },
     {
       "language": "HTML",
-      "percentage": 3.9,
+      "percentage": 4.0,
       "color": "#e34c26"
     },
     {
