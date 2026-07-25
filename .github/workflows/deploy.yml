@@ -25,7 +25,7 @@ jobs:
       - name: Sync GitHub data
         run: python3 scripts/sync-github.py
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 
       - name: Build
         run: npm run build
