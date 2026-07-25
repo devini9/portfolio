@@ -1,14 +1,29 @@
 {
   "metadata": {
-    "lastUpdate": "2026-07-24T01:51:37.178544+00:00",
+    "lastUpdate": "2026-07-25T02:50:58.952477+00:00",
     "source": "GitHub API",
     "githubUser": "devini9",
     "githubName": "Vinicius Mugnes Ferreira Vitorino",
     "githubBio": "E ai, tudo certo? 🤙🏾",
     "githubFollowers": 1,
-    "githubRepos": 1
+    "githubRepos": 2
   },
   "projetos": [
+    {
+      "id": "vvtt",
+      "frontmatter": {
+        "title": "Vvtt",
+        "tags": [
+          "TypeScript"
+        ],
+        "url": "https://github.com/devini9/vvtt",
+        "stars": 0,
+        "forks": 0,
+        "updated": "2026-07-25T02:49:44Z",
+        "private": false
+      },
+      "content": "Sem descrição disponível."
+    },
     {
       "id": "pj-vento",
       "frontmatter": {
@@ -18,21 +33,6 @@
         "stars": 0,
         "forks": 0,
         "updated": "2026-07-03T20:47:45Z",
-        "private": true
-      },
-      "content": "[Projeto Confidencial] Sem descrição disponível."
-    },
-    {
-      "id": "vvtt",
-      "frontmatter": {
-        "title": "🔒 Vvtt",
-        "tags": [
-          "TypeScript"
-        ],
-        "url": "https://github.com/devini9/vvtt",
-        "stars": 0,
-        "forks": 0,
-        "updated": "2026-05-29T16:23:56Z",
         "private": true
       },
       "content": "[Projeto Confidencial] Sem descrição disponível."
@@ -81,6 +81,21 @@
         "private": true
       },
       "content": "[Projeto Confidencial] Sem descrição disponível."
+    },
+    {
+      "id": "discord-bot",
+      "frontmatter": {
+        "title": "🔒 Discord Bot",
+        "tags": [
+          "Python"
+        ],
+        "url": "https://github.com/devini9/discord-bot",
+        "stars": 0,
+        "forks": 0,
+        "updated": "2026-05-28T18:14:40Z",
+        "private": true
+      },
+      "content": "[Projeto Confidencial] Sem descrição disponível."
     }
   ],
   "regras": [
@@ -109,38 +124,43 @@
   "techStats": [
     {
       "language": "Jupyter Notebook",
-      "percentage": 29.3,
+      "percentage": 29.0,
       "color": "#DA5B0B"
     },
     {
       "language": "Shell",
-      "percentage": 24.3,
+      "percentage": 24.6,
       "color": "#89e051"
     },
     {
       "language": "JavaScript",
-      "percentage": 21.2,
+      "percentage": 21.0,
       "color": "#f1e05a"
     },
     {
       "language": "Python",
-      "percentage": 12.8,
+      "percentage": 12.7,
       "color": "#3572A5"
     },
     {
       "language": "PLSQL",
-      "percentage": 4.5,
+      "percentage": 4.4,
       "color": "#dad8d8"
     },
     {
       "language": "HTML",
-      "percentage": 4.0,
+      "percentage": 3.9,
       "color": "#e34c26"
     },
     {
       "language": "TypeScript",
-      "percentage": 2.0,
+      "percentage": 2.2,
       "color": "#3178c6"
+    },
+    {
+      "language": "Rust",
+      "percentage": 0.9,
+      "color": "#dea584"
     },
     {
       "language": "CSS",
@@ -148,14 +168,14 @@
       "color": "#563d7c"
     },
     {
-      "language": "Rust",
-      "percentage": 0.8,
-      "color": "#dea584"
-    },
-    {
       "language": "Batchfile",
       "percentage": 0.2,
       "color": "#C1F12E"
+    },
+    {
+      "language": "Makefile",
+      "percentage": 0.1,
+      "color": "#8b949e"
     },
     {
       "language": "Dockerfile",
@@ -166,15 +186,10 @@
       "language": "Go",
       "percentage": 0.1,
       "color": "#00ADD8"
-    },
-    {
-      "language": "Makefile",
-      "percentage": 0.0,
-      "color": "#8b949e"
     }
   ],
   "privateRepos": {
-    "count": 8,
+    "count": 7,
     "summary": "arquitetura de dados avançada, Inteligência Artificial, processamento em nuvem e automação corporativa com Python e SQL"
   }
 }
