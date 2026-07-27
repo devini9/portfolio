@@ -80,9 +80,7 @@ function App() {
 
         <section id="projects" className="section">
           <SectionHeader title="Projetos em Destaque" />
-          <div className="section-lead">
-            Repositórios e arquiteturas extraídas da base de operações.
-          </div>
+          <div></div>
           
           <div className="project-grid">
             {data?.projetos && data.projetos.length > 0 ? (
@@ -97,8 +95,7 @@ function App() {
           {data?.privateRepos && (
             <div className="private-repos-note" style={{ marginTop: '2rem', padding: '1.5rem', backgroundColor: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: '8px', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
               <p style={{ color: 'var(--text-color)', opacity: 0.8, fontSize: '0.95rem', lineHeight: '1.6' }}>
-                <strong style={{ color: 'var(--text-bright)' }}>🔒 Arquivos Confidenciais:</strong> Além dos projetos acima, a agência mantém mais de <strong>{data.privateRepos.count} repositórios privados</strong>. 
-                Estes projetos envolvem {data.privateRepos.summary} operando sob acordos estritos de confidencialidade.
+                🔒 {data.privateRepos.count} repositórios privados — {data.privateRepos.summary}
               </p>
             </div>
           )}

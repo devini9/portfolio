@@ -93,11 +93,11 @@ export function ExperienceTimeline({ linkedinExperiences }: ExperienceTimelinePr
           <span className="data-source-badge">Dados atualizados via LinkedIn</span>
         )}
       </div>
-      <div className="section-lead">
-        {hasLinkedIn
-          ? "Experiências profissionais sincronizadas automaticamente com seu perfil LinkedIn."
-          : "Um histórico de experiências moldando a base sólida que suporta minhas soluções atuais."}
-      </div>
+      {hasLinkedIn && (
+        <div className="section-lead">
+          "Experiências profissionais sincronizadas automaticamente com seu perfil LinkedIn."
+        </div>
+      )}
 
       <div className="timeline-container">
         {experiences.map((exp, index) => (

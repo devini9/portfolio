@@ -82,10 +82,6 @@ export function Contact() {
         
         <div className="contact-grid">
           <div className="contact-info">
-            <p style={{ fontSize: '1.2rem', lineHeight: '1.8' }}>
-              Os agentes de Atendimento estão prontos para receber 
-              sua mensagem e redirecioná-la diretamente para o Vinícius.
-            </p>
             <div className="contact-methods">
               <p>✉️ Email: viniciusfv.9@gmail.com</p>
             </div>
