@@ -1,14 +1,49 @@
 {
   "metadata": {
-    "lastUpdate": "2026-07-29T08:50:00.000000+00:00",
+    "lastUpdate": "2026-08-04T15:53:46.942852+00:00",
     "source": "GitHub API",
     "githubUser": "devini9",
     "githubName": "Vinicius Mugnes Ferreira Vitorino",
     "githubBio": "E ai, tudo certo? 🤙🏾",
     "githubFollowers": 2,
-    "githubRepos": 2
+    "githubRepos": 4
   },
   "projetos": [
+    {
+      "id": "dice_and_paper",
+      "frontmatter": {
+        "title": "Dice And Paper",
+        "tags": [
+          "JavaScript"
+        ],
+        "url": "https://github.com/devini9/dice_and_paper",
+        "stars": 0,
+        "forks": 0,
+        "updated": "2026-08-04T15:53:39Z",
+        "private": false
+      },
+      "content": "Plataforma de RPG digital com Vite, React e Supabase. Autenticacao, chat em tempo real, grid tatico, fichas GURPS 4e bilingues."
+    },
+    {
+      "id": "gestor_de_carga",
+      "frontmatter": {
+        "title": "Gestor De Carga",
+        "tags": [
+          "Python",
+          "auto-scaling",
+          "azure-service-bus",
+          "devops",
+          "docker",
+          "docker-swarm"
+        ],
+        "url": "https://github.com/devini9/gestor_de_carga",
+        "stars": 0,
+        "forks": 0,
+        "updated": "2026-07-29T11:44:41Z",
+        "private": false
+      },
+      "content": "Agente de monitoramento e auto-scaling para Azure Service Bus. Python, Docker Swarm, métricas em tempo real e relatórios."
+    },
     {
       "id": "vvtt",
       "frontmatter": {
@@ -34,7 +69,7 @@
         "url": "https://github.com/devini9/projeto_vento-international",
         "stars": 0,
         "forks": 0,
-        "updated": "2026-07-27T19:38:47Z",
+        "updated": "2026-07-29T01:07:51Z",
         "private": true
       },
       "content": "[Projeto Confidencial] Infraestrutura de banco de dados e integração para logística internacional. SQL Server, pipelines de dados, dashboards BI e auditoria."
@@ -53,21 +88,6 @@
         "private": true
       },
       "content": "[Projeto Confidencial] Portfólio de estudos do curso de Ciência de Dados da FIAP. Projetos com Python, SQL, Machine Learning e Análise de Negócio."
-    },
-    {
-      "id": "gestor_de_carga",
-      "frontmatter": {
-        "title": "Gestor De Carga",
-        "tags": [
-          "Python"
-        ],
-        "url": "https://github.com/devini9/gestor_de_carga",
-        "stars": 0,
-        "forks": 0,
-        "updated": "2026-07-29T08:45:00Z",
-        "private": false
-      },
-      "content": "Agente de monitoramento e auto-scaling para Azure Service Bus em Python. Algoritmo de alocação proporcional de workers, Docker Swarm, CI/CD e testes unitários."
     },
     {
       "id": "estudos_deVini-9",
@@ -98,6 +118,21 @@
         "private": true
       },
       "content": "[Projeto Confidencial] Bot para Discord desenvolvido em Python com automação e integrações."
+    },
+    {
+      "id": "sustentacao_monitoramento",
+      "frontmatter": {
+        "title": "🔒 Sustentacao Monitoramento",
+        "tags": [
+          "Python"
+        ],
+        "url": "https://github.com/devini9/sustentacao_monitoramento",
+        "stars": 0,
+        "forks": 0,
+        "updated": "2026-05-28T18:05:30Z",
+        "private": true
+      },
+      "content": "[Projeto Confidencial] Sistema de monitoramento para sustentação de infraestrutura com alertas e dashboards."
     }
   ],
   "regras": [
@@ -125,59 +160,54 @@
   "artigos": [],
   "techStats": [
     {
+      "language": "JavaScript",
+      "percentage": 40.2,
+      "color": "#f1e05a"
+    },
+    {
       "language": "Jupyter Notebook",
-      "percentage": 27.6,
+      "percentage": 19.6,
       "color": "#DA5B0B"
     },
     {
       "language": "Shell",
-      "percentage": 23.4,
+      "percentage": 16.6,
       "color": "#89e051"
     },
     {
-      "language": "JavaScript",
-      "percentage": 20.0,
-      "color": "#f1e05a"
-    },
-    {
       "language": "Python",
-      "percentage": 16.6,
+      "percentage": 13.5,
       "color": "#3572A5"
     },
     {
       "language": "PLSQL",
-      "percentage": 4.2,
+      "percentage": 3.0,
       "color": "#dad8d8"
     },
     {
       "language": "HTML",
-      "percentage": 3.8,
+      "percentage": 2.9,
       "color": "#e34c26"
     },
     {
-      "language": "TypeScript",
-      "percentage": 2.1,
-      "color": "#3178c6"
-    },
-    {
       "language": "CSS",
-      "percentage": 0.9,
+      "percentage": 1.8,
       "color": "#563d7c"
     },
     {
+      "language": "TypeScript",
+      "percentage": 1.5,
+      "color": "#3178c6"
+    },
+    {
       "language": "Rust",
-      "percentage": 0.9,
+      "percentage": 0.6,
       "color": "#dea584"
     },
     {
       "language": "Batchfile",
-      "percentage": 0.3,
+      "percentage": 0.2,
       "color": "#C1F12E"
-    },
-    {
-      "language": "Makefile",
-      "percentage": 0.1,
-      "color": "#8b949e"
     },
     {
       "language": "Dockerfile",
@@ -185,8 +215,13 @@
       "color": "#384d54"
     },
     {
+      "language": "Makefile",
+      "percentage": 0.0,
+      "color": "#8b949e"
+    },
+    {
       "language": "Go",
-      "percentage": 0.1,
+      "percentage": 0.0,
       "color": "#00ADD8"
     }
   ],
