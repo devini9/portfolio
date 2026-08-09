@@ -26,6 +26,7 @@ DESCRICOES = {
     "estudos_deVini-9": "Repositório de estudos e experimentos com Jupyter Notebook, Python e Ciência de Dados.",
     "discord-bot": "Bot para Discord desenvolvido em Python com automação e integrações.",
     "sustentacao_monitoramento": "Sistema de monitoramento para sustentação de infraestrutura com alertas e dashboards.",
+    "dice_and_paper": "Plataforma de RPG digital com Vite, React e Supabase. Autenticacao, chat em tempo real, grid tatico, fichas GURPS 4e bilingues.",
 }
 
 LANGUAGE_COLORS = {
