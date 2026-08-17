@@ -1,0 +1,232 @@
+{
+  "metadata": {
+    "lastUpdate": "2026-08-17T02:35:38.967384+00:00",
+    "source": "GitHub API",
+    "githubUser": "devini9",
+    "githubName": "Vinicius Mugnes Ferreira Vitorino",
+    "githubBio": "E ai, tudo certo? 🤙🏾",
+    "githubFollowers": 2,
+    "githubRepos": 4
+  },
+  "projetos": [
+    {
+      "id": "dice_and_paper",
+      "frontmatter": {
+        "title": "Dice And Paper",
+        "tags": [
+          "JavaScript"
+        ],
+        "url": "https://github.com/devini9/dice_and_paper",
+        "stars": 0,
+        "forks": 0,
+        "updated": "2026-08-04T15:53:39Z",
+        "private": false
+      },
+      "content": "Plataforma de RPG digital com Vite, React e Supabase. Autenticacao, chat em tempo real, grid tatico, fichas GURPS 4e bilingues."
+    },
+    {
+      "id": "gestor_de_carga",
+      "frontmatter": {
+        "title": "Gestor De Carga",
+        "tags": [
+          "Python",
+          "auto-scaling",
+          "azure-service-bus",
+          "devops",
+          "docker",
+          "docker-swarm"
+        ],
+        "url": "https://github.com/devini9/gestor_de_carga",
+        "stars": 0,
+        "forks": 0,
+        "updated": "2026-07-29T11:44:41Z",
+        "private": false
+      },
+      "content": "Agente de monitoramento e auto-scaling para Azure Service Bus. Python, Docker Swarm, métricas em tempo real e relatórios."
+    },
+    {
+      "id": "vvtt",
+      "frontmatter": {
+        "title": "Vvtt",
+        "tags": [
+          "TypeScript"
+        ],
+        "url": "https://github.com/devini9/vvtt",
+        "stars": 0,
+        "forks": 0,
+        "updated": "2026-07-27T02:11:15Z",
+        "private": false
+      },
+      "content": "Cliente desktop para Foundry VTT com Tauri v2. Multiplataforma (Windows/Linux/macOS), credenciais seguras, customização de temas e cache."
+    },
+    {
+      "id": "projeto_vento-international",
+      "frontmatter": {
+        "title": "🔒 Projeto Vento International",
+        "tags": [
+          "Python"
+        ],
+        "url": "https://github.com/devini9/projeto_vento-international",
+        "stars": 0,
+        "forks": 0,
+        "updated": "2026-07-29T01:07:51Z",
+        "private": true
+      },
+      "content": "[Projeto Confidencial] Infraestrutura de banco de dados e integração para logística internacional. SQL Server, pipelines de dados, dashboards BI e auditoria."
+    },
+    {
+      "id": "estudos_FIAP",
+      "frontmatter": {
+        "title": "🔒 Estudos Fiap",
+        "tags": [
+          "Jupyter Notebook"
+        ],
+        "url": "https://github.com/devini9/estudos_FIAP",
+        "stars": 0,
+        "forks": 0,
+        "updated": "2026-05-28T18:14:41Z",
+        "private": true
+      },
+      "content": "[Projeto Confidencial] Portfólio de estudos do curso de Ciência de Dados da FIAP. Projetos com Python, SQL, Machine Learning e Análise de Negócio."
+    },
+    {
+      "id": "estudos_deVini-9",
+      "frontmatter": {
+        "title": "🔒 Estudos Devini 9",
+        "tags": [
+          "Jupyter Notebook"
+        ],
+        "url": "https://github.com/devini9/estudos_deVini-9",
+        "stars": 0,
+        "forks": 0,
+        "updated": "2026-05-28T18:14:40Z",
+        "private": true
+      },
+      "content": "[Projeto Confidencial] Repositório de estudos e experimentos com Jupyter Notebook, Python e Ciência de Dados."
+    },
+    {
+      "id": "discord-bot",
+      "frontmatter": {
+        "title": "🔒 Discord Bot",
+        "tags": [
+          "Python"
+        ],
+        "url": "https://github.com/devini9/discord-bot",
+        "stars": 0,
+        "forks": 0,
+        "updated": "2026-05-28T18:14:40Z",
+        "private": true
+      },
+      "content": "[Projeto Confidencial] Bot para Discord desenvolvido em Python com automação e integrações."
+    },
+    {
+      "id": "sustentacao_monitoramento",
+      "frontmatter": {
+        "title": "🔒 Sustentacao Monitoramento",
+        "tags": [
+          "Python"
+        ],
+        "url": "https://github.com/devini9/sustentacao_monitoramento",
+        "stars": 0,
+        "forks": 0,
+        "updated": "2026-05-28T18:05:30Z",
+        "private": true
+      },
+      "content": "[Projeto Confidencial] Sistema de monitoramento para sustentação de infraestrutura com alertas e dashboards."
+    }
+  ],
+  "regras": [
+    {
+      "regra": "Agent Hermes",
+      "descricao": "Agente encarregado de buscar dados do GitHub e Google Sheets e orquestrar a sincronização contínua com a base do ecossistema."
+    },
+    {
+      "regra": "Agent Clara",
+      "descricao": "Agente de inteligência e compliance que verifica a qualidade dos dados e garante que o tom das respostas seja amigável e profissional."
+    },
+    {
+      "regra": "Agent Otto",
+      "descricao": "Agente projetado para otimização e processos de retaguarda, lidando com tarefas automatizadas pesadas e rotinas de backup."
+    },
+    {
+      "regra": "Agent Pixel",
+      "descricao": "Agente especialista em interface gráfica, responsável por gerar layouts, manter a identidade visual e implementar melhorias de design."
+    },
+    {
+      "regra": "Agent Aegis",
+      "descricao": "Agente de segurança e infraestrutura, responsável por monitorar deploys no GitHub Pages, rastrear falhas e manter o sistema sempre online."
+    }
+  ],
+  "artigos": [],
+  "techStats": [
+    {
+      "language": "JavaScript",
+      "percentage": 40.2,
+      "color": "#f1e05a"
+    },
+    {
+      "language": "Jupyter Notebook",
+      "percentage": 19.5,
+      "color": "#DA5B0B"
+    },
+    {
+      "language": "Shell",
+      "percentage": 16.6,
+      "color": "#89e051"
+    },
+    {
+      "language": "Python",
+      "percentage": 13.5,
+      "color": "#3572A5"
+    },
+    {
+      "language": "PLSQL",
+      "percentage": 3.0,
+      "color": "#dad8d8"
+    },
+    {
+      "language": "HTML",
+      "percentage": 2.9,
+      "color": "#e34c26"
+    },
+    {
+      "language": "CSS",
+      "percentage": 1.8,
+      "color": "#563d7c"
+    },
+    {
+      "language": "TypeScript",
+      "percentage": 1.5,
+      "color": "#3178c6"
+    },
+    {
+      "language": "Rust",
+      "percentage": 0.6,
+      "color": "#dea584"
+    },
+    {
+      "language": "Batchfile",
+      "percentage": 0.2,
+      "color": "#C1F12E"
+    },
+    {
+      "language": "Dockerfile",
+      "percentage": 0.1,
+      "color": "#384d54"
+    },
+    {
+      "language": "Makefile",
+      "percentage": 0.0,
+      "color": "#8b949e"
+    },
+    {
+      "language": "Go",
+      "percentage": 0.0,
+      "color": "#00ADD8"
+    }
+  ],
+  "privateRepos": {
+    "count": 6,
+    "summary": "arquitetura de dados avançada, Inteligência Artificial, processamento em nuvem e automação corporativa com Python e SQL"
+  }
+}
