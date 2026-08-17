@@ -19,14 +19,9 @@ EXCLUDE_REPOS = ["portfolio", "base-devini9", ".github"]
 
 # Descrições customizadas de até 170 caracteres por projeto
 DESCRICOES = {
-    "vvtt": "Cliente desktop para Foundry VTT com Tauri v2. Multiplataforma (Windows/Linux/macOS), credenciais seguras, customização de temas e cache.",
     "pj-vento": "Infraestrutura de banco de dados e integração para logística internacional. SQL Server, pipelines de dados, dashboards BI e auditoria.",
-    "estudos_FIAP": "Portfólio de estudos do curso de Ciência de Dados da FIAP. Projetos com Python, SQL, Machine Learning e Análise de Negócio.",
     "gestor_de_carga": "Agente de monitoramento e auto-scaling para Azure Service Bus. Python, Docker Swarm, métricas em tempo real e relatórios.",
-    "estudos_deVini-9": "Repositório de estudos e experimentos com Jupyter Notebook, Python e Ciência de Dados.",
-    "discord-bot": "Bot para Discord desenvolvido em Python com automação e integrações.",
     "sustentacao_monitoramento": "Sistema de monitoramento para sustentação de infraestrutura com alertas e dashboards.",
-    "dice_and_paper": "Plataforma de RPG digital com Vite, React e Supabase. Autenticacao, chat em tempo real, grid tatico, fichas GURPS 4e bilingues.",
 }
 
 LANGUAGE_COLORS = {
