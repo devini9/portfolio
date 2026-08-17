@@ -1,0 +1,16 @@
+{
+  "name": "5-agente-guardiao",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "node-cron": "^4.5.0",
+    "simple-git": "^3.36.0"
+  }
+}

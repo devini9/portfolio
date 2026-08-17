@@ -1,0 +1,24 @@
+{
+  "name": "2-agente-hermes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.18.1",
+    "chokidar": "^5.0.0",
+    "dotenv": "^17.4.2",
+    "googleapis": "^173.0.0",
+    "gray-matter": "^4.0.3",
+    "node-cron": "^4.2.1",
+    "pdfkit": "^0.19.1",
+    "pg": "^8.21.0",
+    "simple-git": "^3.36.0"
+  }
+}

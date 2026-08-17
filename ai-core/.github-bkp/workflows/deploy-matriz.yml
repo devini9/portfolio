@@ -1,0 +1,49 @@
+name: Matriz DataOps (Google Sync)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '* * * * *' # Roda de minuto a minuto
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Matriz
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependências dos Agentes
+        run: cd 2-agente-hermes && npm ci
+
+      - name: Criar credencial do Google
+        run: echo '${{ secrets.GOOGLE_CREDENTIALS }}' > 2-agente-hermes/google-credentials.json
+
+      - name: Checkout Filial (Portfolio)
+        uses: actions/checkout@v4
+        with:
+          repository: devini9/portfolio
+          ref: main
+          token: ${{ secrets.DEPLOY_TOKEN }}
+          path: filial-portfolio
+
+      - name: Rodar Agente Hermes & Clara (Extração via API)
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
+          # Altera o destino de saída temporariamente para a filial clonada
+          sed -i "s|'../1-frontend-gamificado/public/data'|'../filial-portfolio/public/data'|g" 2-agente-hermes/build.js
+          cd 2-agente-hermes && node build.js
+
+      - name: Enviar dados atualizados para a Filial
+        run: |
+          cd filial-portfolio
+          git config user.name "Agente Hermes (Matriz)"
+          git config user.email "hermes@devini9.com"
+          git add public/data/cerebro.json public/data/curriculo.pdf
+          git commit -m "data: sincronizacao automatica com google workspace" || echo "Nenhuma mudanca"
+          git push origin main

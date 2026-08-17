@@ -1,0 +1,42 @@
+name: Agent Assis (Prompt Engineer)
+
+on:
+  schedule:
+    # Rodar a cada 8 horas
+    - cron: '0 */8 * * *'
+  workflow_dispatch:
+    # Permite rodar manualmente a qualquer momento pela interface do GitHub
+
+permissions:
+  contents: write # Necessário para commitar as alterações de volta no repositório
+  pull-requests: write
+
+jobs:
+  run-agent-assis:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Agent Assis
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/agent-assis.js
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add context-prompts/
+          git commit -m "🤖 docs: Agent Assis gerou/atualizou os System Prompts [skip ci]" || echo "Nenhuma mudança nos prompts."
+          git push

@@ -1,0 +1,31 @@
+{
+  "name": "Vinícius",
+  "location": "Brasil",
+  "email": "viniciusfv.9@gmail.com",
+  "linkedin": "linkedin.com/in/devini9",
+  "summary": "Desenvolvedor focado na construção de arquiteturas escaláveis, integrações com IA e automação de processos. Experiência na criação de sistemas complexos usando React, Node.js e Serverless.",
+  "skills": [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Node.js",
+    "GitHub Actions",
+    "Agentes de IA",
+    "Arquitetura de Software"
+  ],
+  "experience": [
+    {
+      "role": "Desenvolvedor de Software",
+      "company": "Sua Empresa Atual ou Freelance",
+      "period": "2023 - Presente",
+      "description": "Desenvolvimento de portfólio autônomo com infraestrutura de agentes de IA operando em nuvem..."
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bacharelado / Tecnólogo em Ciência da Computação",
+      "institution": "Sua Universidade",
+      "period": "2020 - 2024"
+    }
+  ]
+}

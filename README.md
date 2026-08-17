@@ -74,6 +74,15 @@ python scripts/sync-linkedin.py data/linkedin.zip
 
 ```
 portfolio/
+├── ai-core/                  # Núcleo de IA e orquestração (antigo base-devini9)
+│   ├── 0-documentacao-base/  # Documentação da arquitetura base
+│   ├── 2-agente-hermes/      # Agente Node.js de extração de dados e sincronização
+│   ├── 3-banco-de-dados/     # Scripts e esquemas do banco
+│   ├── 4-obsidian-vault/     # Cofre do Obsidian (contexto)
+│   ├── 5-agente-guardiao/    # Monitoramento do ecossistema
+│   ├── context-prompts/      # Prompts de contexto global e local
+│   ├── scripts/              # Scripts de suporte da matriz (Ex: Agent Assis)
+│   └── package.json          # Dependências exclusivas dos agentes
 ├── src/
 │   ├── components/
 │   │   ├── Header.tsx            # Navegação fixa com toggle de tema
