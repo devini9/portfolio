@@ -66,10 +66,6 @@
   transition: all 0.3s ease;
 }
 
-.project-card-private:hover .project-content-blur {
-  filter: blur(0);
-  opacity: 1;
-}
 
 .project-private-overlay {
   position: absolute;
