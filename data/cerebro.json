@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "lastUpdate": "2026-08-17T17:19:58.081411+00:00",
+    "lastUpdate": "2026-08-19T18:11:07.539982+00:00",
     "source": "GitHub API",
     "githubUser": "devini9",
     "githubName": "Vinicius Mugnes Ferreira Vitorino",
@@ -23,21 +23,6 @@
         "private": true
       },
       "content": "[Projeto Confidencial] Infraestrutura de banco de dados e integração para logística internacional. SQL Server, pipelines de dados, dashboards BI e auditoria."
-    },
-    {
-      "id": "estudos_FIAP",
-      "frontmatter": {
-        "title": "🔒 Estudos Fiap",
-        "tags": [
-          "Jupyter Notebook"
-        ],
-        "url": "https://github.com/devini9/estudos_FIAP",
-        "stars": 0,
-        "forks": 0,
-        "updated": "2026-05-28T18:14:41Z",
-        "private": true
-      },
-      "content": "[Projeto Confidencial] Sem descrição disponível."
     },
     {
       "id": "sustentacao_monitoramento",
@@ -81,42 +66,32 @@
   "techStats": [
     {
       "language": "Python",
-      "percentage": 53.2,
+      "percentage": 93.0,
       "color": "#3572A5"
     },
     {
-      "language": "Jupyter Notebook",
-      "percentage": 25.0,
-      "color": "#DA5B0B"
-    },
-    {
-      "language": "PLSQL",
-      "percentage": 18.1,
-      "color": "#dad8d8"
-    },
-    {
       "language": "HTML",
-      "percentage": 2.6,
+      "percentage": 4.8,
       "color": "#e34c26"
     },
     {
       "language": "Batchfile",
-      "percentage": 0.5,
+      "percentage": 0.9,
       "color": "#C1F12E"
     },
     {
       "language": "Dockerfile",
-      "percentage": 0.4,
+      "percentage": 0.8,
       "color": "#384d54"
     },
     {
       "language": "Go",
-      "percentage": 0.3,
+      "percentage": 0.5,
       "color": "#00ADD8"
     }
   ],
   "privateRepos": {
-    "count": 3,
+    "count": 2,
     "summary": "arquitetura de dados avançada, Inteligência Artificial, processamento em nuvem e automação corporativa com Python e SQL"
   }
 }
