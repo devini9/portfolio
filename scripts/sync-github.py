@@ -20,7 +20,6 @@ EXCLUDE_REPOS = ["portfolio", "base-devini9", ".github"]
 # Descrições customizadas de até 170 caracteres por projeto
 DESCRICOES = {
     "pj-vento": "Infraestrutura de banco de dados e integração para logística internacional. SQL Server, pipelines de dados, dashboards BI e auditoria.",
-    "gestor_de_carga": "Agente de monitoramento e auto-scaling para Azure Service Bus. Python, Docker Swarm, métricas em tempo real e relatórios.",
     "sustentacao_monitoramento": "Sistema de monitoramento para sustentação de infraestrutura com alertas e dashboards.",
 }
 
