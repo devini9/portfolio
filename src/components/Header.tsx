@@ -22,7 +22,7 @@ export function Header() {
   const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     if (id === 'top') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo(0, 0);
     } else {
       const el = document.getElementById(id);
       if (el) el.scrollIntoView({ behavior: 'smooth' });

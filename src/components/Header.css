@@ -1,6 +1,7 @@
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   background: var(--bg-header);
   backdrop-filter: blur(12px);
