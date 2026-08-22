@@ -20,7 +20,7 @@
   --brand-color-rgb: 232, 122, 93;
 
   /* Component-specific variables */
-  --bg-header: rgba(10, 12, 16, 0.85);
+  --bg-header: rgba(10, 12, 16, 0.80);
   --color-scrollbar-thumb: #3a4050;
   --color-scrollbar-thumb-hover: #4a5060;
   --bg-input: #1a1f2e;
