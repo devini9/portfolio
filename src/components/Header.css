@@ -104,31 +104,3 @@
   transform: translateY(-2px);
 }
 
-.theme-toggle {
-  background: transparent;
-  border: 1px solid var(--line-color);
-  color: var(--text-muted);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.4rem;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-  width: 32px;
-  height: 32px;
-  margin-left: 0.5rem;
-}
-
-.theme-toggle:hover {
-  color: var(--brand-color);
-  border-color: var(--brand-color);
-  background: var(--bg-surface-hover);
-  transform: translateY(-2px);
-}
-
-@media (max-width: 900px) {
-  .theme-toggle {
-    margin-left: 0;
-  }
-}
