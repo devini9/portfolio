@@ -9,11 +9,18 @@ interface LinkedInExperience {
   description?: string;
 }
 
-interface FallbackExperience {
-  company: string;
-  role: string;
+interface RoleDetail {
+  title: string;
   period: string;
   description: string[];
+}
+
+interface FallbackExperience {
+  company: string;
+  role?: string;
+  period?: string;
+  description?: string[];
+  roles?: RoleDetail[];
 }
 
 interface ExperienceTimelineProps {
@@ -23,20 +30,23 @@ interface ExperienceTimelineProps {
 const FALLBACK_EXPERIENCES: FallbackExperience[] = [
   {
     company: "Vento International Logistics",
-    role: "Consultor SAP BI",
-    period: "Setembro de 2026 – Presente",
-    description: [
-      "Modelagem e construção de dashboards analíticos no Power BI para suporte a decisões estratégicas e financeiras da diretoria executiva, gerando inteligência de negócios em tempo real."
-    ]
-  },
-  {
-    company: "Vento International Logistics",
-    role: "Consultor de Banco de Dados e Automação de Processos",
-    period: "Março de 2026 – Presente",
-    description: [
-      "Liderança na modernização da infraestrutura de banco de dados e na automatização inteligente de workflows corporativos, reduzindo falhas sistêmicas.",
-      "Modelagem e construção de dashboards analíticos no Power BI para suporte a decisões estratégicas e financeiras da diretoria executiva.",
-      "Projetou e implantou agentes de IA baseados em modelos de linguagem (LLMs) para a automação de tarefas operacionais repetitivas."
+    roles: [
+      {
+        title: "Consultor SAP BI",
+        period: "Setembro de 2026 – Presente",
+        description: [
+          "Modelagem e construção de dashboards analíticos no Power BI para suporte a decisões estratégicas e financeiras da diretoria executiva, gerando inteligência de negócios em tempo real."
+        ]
+      },
+      {
+        title: "Consultor de Banco de Dados e Automação de Processos",
+        period: "Março de 2026 – Presente",
+        description: [
+          "Liderança na modernização da infraestrutura de banco de dados e na automatização inteligente de workflows corporativos, reduzindo falhas sistêmicas.",
+          "Modelagem e construção de dashboards analíticos no Power BI para suporte a decisões estratégicas e financeiras da diretoria executiva.",
+          "Projetou e implantou agentes de IA baseados em modelos de linguagem (LLMs) para a automação de tarefas operacionais repetitivas."
+        ]
+      }
     ]
   },
   {
@@ -108,21 +118,43 @@ export function ExperienceTimeline({ linkedinExperiences }: ExperienceTimelinePr
       )}
 
       <div className="timeline-container">
-        {experiences.map((exp, index) => (
+        {experiences.map((exp: any, index) => (
           <div key={index} className="timeline-item">
             <div className="timeline-dot"></div>
             <div className="timeline-content">
-              <div className="timeline-header">
-                <h3 className="timeline-role">{exp.role}</h3>
-                <span className="timeline-period">{exp.period}</span>
-              </div>
-              <h4 className="timeline-company">{exp.company}</h4>
-              {exp.description.length > 0 && (
-                <ul className="timeline-description">
-                  {exp.description.map((desc, i) => (
-                    <li key={i}>{desc}</li>
-                  ))}
-                </ul>
+              {exp.roles ? (
+                <>
+                  <h3 className="timeline-role" style={{ marginBottom: '1.5rem', color: 'var(--brand-color)' }}>{exp.company}</h3>
+                  <div className="timeline-roles-container" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+                    {exp.roles.map((r: any, idx: number) => (
+                      <div key={idx} className="timeline-nested-role" style={{ position: 'relative', paddingLeft: '1.5rem', borderLeft: '1px solid rgba(255,255,255,0.1)' }}>
+                        <div style={{ position: 'absolute', left: '-4px', top: '8px', width: '7px', height: '7px', borderRadius: '50%', background: 'var(--text-muted)' }}></div>
+                        <div className="timeline-header" style={{ marginBottom: '0.8rem' }}>
+                          <h4 style={{ fontSize: '1.15rem', color: 'var(--text-bright)', margin: 0 }}>{r.title}</h4>
+                          <span className="timeline-period" style={{ fontSize: '0.8rem', opacity: 0.9 }}>{r.period}</span>
+                        </div>
+                        <ul className="timeline-description">
+                          {r.description.map((d: string, i: number) => <li key={i}>{d}</li>)}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="timeline-header">
+                    <h3 className="timeline-role">{exp.role}</h3>
+                    <span className="timeline-period">{exp.period}</span>
+                  </div>
+                  <h4 className="timeline-company">{exp.company}</h4>
+                  {exp.description && exp.description.length > 0 && (
+                    <ul className="timeline-description">
+                      {exp.description.map((desc: string, i: number) => (
+                        <li key={i}>{desc}</li>
+                      ))}
+                    </ul>
+                  )}
+                </>
               )}
             </div>
           </div>
