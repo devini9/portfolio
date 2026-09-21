@@ -13,64 +13,80 @@ export function CVTemplate() {
     <div id="cv-template" className="cv-template-container">
       <div className="cv-header">
         <h1>Vinícius Mugnes Ferrira Vitorino</h1>
-        <h2>Especialista em IA & Automação | Consultor de Banco de Dados | LLMs | Agentes de IA | Python | SQL</h2>
-        <div className="cv-contact">
-          <p>Email: contato@devini.com.br</p>
-          <p>LinkedIn: linkedin.com/in/vinicius-mugnes</p>
-        </div>
-        <p className="cv-summary">
-          Impulsiono o crescimento das empresas por meio de tecnologias de dados e Inteligência Artificial.
-          Ajudo a modernizar sua infraestrutura de dados e a automatizar rotinas corporativas, focando em segurança,
-          visibilidade em tempo real e eficiência.
-        </p>
+        <h2>Especialista em IA & Automação | Consultor de Banco de Dados | LLMs | Python</h2>
       </div>
 
-      <div className="cv-section">
-        <h3>Habilidades e Tecnologias</h3>
-        <div className="cv-skills">
-          {skills.join(" • ")}
-        </div>
-      </div>
-
-      <div className="cv-section">
-        <h3>Experiência Profissional</h3>
-        <div className="cv-experiences">
-          {FALLBACK_EXPERIENCES.map((exp, index) => (
-            <div key={index} className="cv-experience-item">
-              {exp.roles ? (
-                <>
-                  <h4 className="cv-company">{exp.company}</h4>
-                  {exp.roles.map((r, idx) => (
-                    <div key={idx} className="cv-nested-role">
-                      <div className="cv-role-header">
-                        <span className="cv-role">{r.title}</span>
-                        <span className="cv-period">{r.period}</span>
-                      </div>
-                      <ul>
-                        {r.description.map((desc, i) => <li key={i}>{desc}</li>)}
-                      </ul>
-                    </div>
-                  ))}
-                </>
-              ) : (
-                <>
-                  <div className="cv-role-header">
-                    <span className="cv-role">{exp.role}</span>
-                    <span className="cv-period">{exp.period}</span>
-                  </div>
-                  <h4 className="cv-company">{exp.company}</h4>
-                  {exp.description && exp.description.length > 0 && (
-                    <ul>
-                      {exp.description.map((desc, i) => (
-                        <li key={i}>{desc}</li>
-                      ))}
-                    </ul>
-                  )}
-                </>
-              )}
+      <div className="cv-body">
+        <aside className="cv-sidebar">
+          <div className="cv-section">
+            <h3>Contato</h3>
+            <div className="cv-contact">
+              <p><strong>Email:</strong><br/>contato@devini.com.br</p>
+              <p><strong>LinkedIn:</strong><br/>linkedin.com/in/vinicius-mugnes</p>
             </div>
-          ))}
-        </div>
+          </div>
+
+          <div className="cv-section">
+            <h3>Resumo Profissional</h3>
+            <p className="cv-summary">
+              Impulsiono o crescimento das empresas por meio de tecnologias de dados e Inteligência Artificial.
+              Ajudo a modernizar infraestruturas e a automatizar rotinas corporativas, focando em segurança,
+              visibilidade em tempo real e eficiência.
+            </p>
+          </div>
+
+          <div className="cv-section">
+            <h3>Habilidades Core</h3>
+            <div className="cv-skills">
+              {skills.map((skill, index) => (
+                <span key={index} className="cv-skill-tag">{skill}</span>
+              ))}
+            </div>
+          </div>
+        </aside>
+
+        <main className="cv-main">
+          <div className="cv-section cv-section-main">
+            <h3>Experiência Profissional</h3>
+            <div className="cv-experiences">
+              {FALLBACK_EXPERIENCES.map((exp, index) => (
+                <div key={index} className="cv-experience-item">
+                  {exp.roles ? (
+                    <>
+                      <h4 className="cv-company">{exp.company}</h4>
+                      {exp.roles.map((r, idx) => (
+                        <div key={idx} className="cv-nested-role">
+                          <div className="cv-role-header">
+                            <span className="cv-role">{r.title}</span>
+                            <span className="cv-period">{r.period}</span>
+                          </div>
+                          <ul>
+                            {r.description.map((desc, i) => <li key={i}>{desc}</li>)}
+                          </ul>
+                        </div>
+                      ))}
+                    </>
+                  ) : (
+                    <>
+                      <div className="cv-role-header">
+                        <span className="cv-role">{exp.role}</span>
+                        <span className="cv-period">{exp.period}</span>
+                      </div>
+                      <h4 className="cv-company">{exp.company}</h4>
+                      {exp.description && exp.description.length > 0 && (
+                        <ul>
+                          {exp.description.map((desc, i) => (
+                            <li key={i}>{desc}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </main>
       </div>
     </div>
   );
