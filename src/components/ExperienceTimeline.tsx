@@ -30,7 +30,7 @@ const FALLBACK_EXPERIENCES: FallbackExperience[] = [
     ]
   },
   {
-    company: "Autônomo / Consultoria B2B",
+    company: "Vento International Logistics",
     role: "Consultor de Banco de Dados e Automação de Processos",
     period: "Março de 2026 – Presente",
     description: [
