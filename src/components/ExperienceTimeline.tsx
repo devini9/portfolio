@@ -27,7 +27,7 @@ interface ExperienceTimelineProps {
   linkedinExperiences?: LinkedInExperience[];
 }
 
-const FALLBACK_EXPERIENCES: FallbackExperience[] = [
+export const FALLBACK_EXPERIENCES: FallbackExperience[] = [
   {
     company: "Vento International Logistics",
     roles: [
