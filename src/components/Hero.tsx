@@ -12,7 +12,7 @@ export function Hero({ stats }: HeroProps) {
       <div className="hero-content">
         <h1 className="hero-title">Cientista de Dados & Especialista em IA.</h1>
         <p className="hero-tagline">
-          Consultor de Banco de Dados | LLMs | Agentes de IA | Python | SQL.
+          Especialista em IA & Automação | Consultor de Banco de Dados | LLMs | Agentes de IA | Python | SQL.
         </p>
         <div style={{ marginTop: '2rem' }}>
           <LanguageChart stats={stats} />
