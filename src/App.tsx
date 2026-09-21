@@ -4,7 +4,6 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { SectionHeader } from './components/SectionHeader';
 import { ProjectCard } from './components/ProjectCard';
-import { CVTemplate } from './components/CVTemplate';
 
 // Lazy loading para componentes não críticos
 const Contact = lazy(() => import('./components/Contact').then(mod => ({ default: mod.Contact })));
@@ -111,8 +110,6 @@ function App() {
       <footer className="site-footer">
         <span>© 2026 devini9. Sistemas operando normalmente.</span>
       </footer>
-
-      <CVTemplate />
     </>
   );
 }
