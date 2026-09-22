@@ -8,7 +8,6 @@ interface HeroProps {
 export function Hero({ stats }: HeroProps) {
   return (
     <section className="hero reveal">
-      <div className="hero-glow"></div>
       <div className="hero-content">
         <h1 className="hero-title">Cientista de Dados & Especialista em IA.</h1>
         <p className="hero-tagline">
