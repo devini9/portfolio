@@ -1,12 +1,16 @@
 {
   "metadata": {
-    "lastUpdate": "2026-08-19T18:11:07.539982+00:00",
-    "source": "GitHub API",
+    "lastUpdate": "2026-10-29T03:02:47.098+00:00",
+    "source": "GitHub API + LinkedIn público + PDF currículo",
     "githubUser": "devini9",
     "githubName": "Vinicius Mugnes Ferreira Vitorino",
     "githubBio": "E ai, tudo certo? 🤙🏾",
-    "githubFollowers": 2,
-    "githubRepos": 1
+    "githubFollowers": 1,
+    "githubRepos": 1,
+    "githubPublicRepos": 1,
+    "githubPrivateRepos": 3,
+    "githubTotalRepos": 4,
+    "linkedinFollowers": 1014
   },
   "projetos": [
     {
@@ -38,6 +42,21 @@
         "private": true
       },
       "content": "[Projeto Confidencial] Sistema de monitoramento para sustentação de infraestrutura com alertas e dashboards."
+    },
+    {
+      "id": "deAgent",
+      "frontmatter": {
+        "title": "🔒 deAgent",
+        "tags": [
+          "JSON"
+        ],
+        "url": "https://github.com/devini9/deAgent",
+        "stars": 0,
+        "forks": 0,
+        "updated": "2026-10-14T18:13:37Z",
+        "private": true
+      },
+      "content": "Registro de definições de agentes de IA em JSON com schema próprio (_schema.json) e template base. Inclui o agente 'escritor' (gerador de definições de novos agentes compatíveis com opencode e hermes, com model routing, política cumulativa de skills e memória auto-atualizável) e o agente 'dedesconto' (fullstack do projeto bot_descontos: vitrine de ofertas com pipeline de coleta em Shopee/Amazon/Mercado Livre)."
     }
   ],
   "regras": [
@@ -66,12 +85,12 @@
   "techStats": [
     {
       "language": "Python",
-      "percentage": 93.0,
+      "percentage": 93.4,
       "color": "#3572A5"
     },
     {
       "language": "HTML",
-      "percentage": 4.8,
+      "percentage": 4.4,
       "color": "#e34c26"
     },
     {
@@ -91,7 +110,52 @@
     }
   ],
   "privateRepos": {
-    "count": 2,
-    "summary": "arquitetura de dados avançada, Inteligência Artificial, processamento em nuvem e automação corporativa com Python e SQL"
+    "count": 3,
+    "summary": "arquitetura de dados avançada, Inteligência Artificial (registro de agentes deAgent), processamento em nuvem e automação corporativa com Python e SQL"
+  },
+  "curriculo": {
+    "nome": "Vinícius Mugnes Ferreira Vitorino",
+    "headline": "Fundador & Consultor de Dados e IA",
+    "cargoAtual": {
+      "empresa": "DEVINI Serviços de Tecnologia ltda",
+      "cargo": "Fundador & Consultor de Dados e IA",
+      "inicio": "2025-11",
+      "periodo": "2025-11 → atual",
+      "tipo": "Full-time",
+      "local": "Jundiaí, SP"
+    },
+    "localizacao": "Jundiaí, SP, Brasil",
+    "resumoProfissional": "Especialista em Ciência de Dados e Automação Inteligente focado em transformar dados complexos em ativos de valor estratégico. Ampla experiência na concepção de robôs e agentes de IA, desenvolvimento de fluxos automatizados e modernização de arquiteturas de banco de dados (SQL Server, PostgreSQL, Oracle). Habilidade comprovada em otimizar infraestruturas em nuvem (Azure, AWS, GCP) e modelar pipelines eficientes, reduzindo custos operacionais e fornecendo visibilidade executiva em tempo real para a tomada de decisão da liderança.",
+    "resumoCargoAtual": "• Estruturação de Dados: Implementação de arquiteturas de Banco de Dados de alto desempenho (Oracle, SQL Server, PostgreSQL) preparadas para escala.\n• Automatização com IA: Redução de trabalho operacional através de agentes de IA e fluxos automatizados.\n• Infraestrutura Moderna: Deploy e orquestração utilizando Docker para garantir ambientes ágeis e portáteis.",
+    "formacaoAcademica": [
+      {
+        "curso": "Tecnologia em Ciência de Dados",
+        "instituicao": "FIAP",
+        "periodo": "2025 – 2027",
+        "status": "Em andamento"
+      }
+    ],
+    "certificacoesQualificacao": [
+      "Certificado de Qualificação Profissional em Modelagem, Programação e Qualidade de Dados",
+      "Certificado de Qualificação Profissional em Arquitetura de Analytics e Big Data",
+      "Certificado de Qualificação Profissional em Análise e Visualização de Dados",
+      "Certificado de Qualificação Profissional em IA, Machine Learning e Deep Learning"
+    ],
+    "certificacoesAdicionais": [
+      "Git & GitHub (Controle de Versão)",
+      "Metodologias Ágeis (Scrum / Kanban)",
+      "Quality Assurance (QA) – Planos de Teste e Bugs",
+      "Edição de Vídeo"
+    ],
+    "idiomas": {
+      "Português": "Nativo",
+      "Inglês": "B1 (Intermediário)"
+    },
+    "links": {
+      "linkedin": "https://linkedin.com/in/devini9",
+      "github": "https://github.com/devini9",
+      "portfolio": "https://devini9.github.io/portfolio/"
+    },
+    "email": "viniciusfv.9@gmail.com"
   }
 }
