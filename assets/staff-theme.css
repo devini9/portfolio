@@ -1,57 +1,52 @@
 /* 
-  TEMA B - Modern Tech (Dark mantido com nova identidade)
-  Identidade nova: teal / azul elétrico
-  Cards com leve glassmorphism, futurista
-  Público-alvo: agências e agentes de RH
+  TEMA B - Ajustado para grafite neutro com acento salmão
 */
 
 :root {
-  /* Fundos - dark mantido com tom mais tech */
-  --bg-color: #060910;
-  --bg-surface: rgba(17, 24, 39, 0.8);
-  --bg-surface-hover: rgba(22, 32, 51, 0.9);
-  --bg-card: rgba(17, 24, 39, 0.75);
-  --bg-header: rgba(6, 9, 16, 0.85);
-  --bg-input: rgba(20, 28, 45, 0.9);
-  --bg-progress-track: rgba(30, 41, 59, 0.8);
+  /* Fundos - família grafite neutra */
+  --bg-color: #1a1a1e;
+  --bg-surface: #232327;
+  --bg-surface-hover: #2a2a30;
+  --bg-card: #232327;
+  --bg-header: rgba(26, 26, 30, 0.9);
+  --bg-input: #1f1f23;
+  --bg-progress-track: #1f1f23;
 
   /* Texto */
-  --text-main: #e6f0ff;
-  --text-bright: #f8fbff;
-  --text-muted: #8b9bbd;
-  --text-color: #b8c5e6;
-  --text-tag: #06121f;
+  --text-main: #e8e8ea;
+  --text-bright: #f8f8f8;
+  --text-muted: #9a9aa2;
+  --text-color: #e8e8ea;
+  --text-tag: #1a1a1e;
 
   /* Bordas e linhas */
-  --border-color: rgba(56, 189, 248, 0.25);
-  --line-color: rgba(56, 189, 248, 0.18);
+  --border-color: #33333a;
+  --line-color: #2b2b31;
 
-  /* Marca/acentos - teal / azul elétrico */
-  --color-salmon: #38bdf8;      /* Azul elétrico */
-  --color-moss: #22d3ee;        /* Teal ciano */
-  --brand-color: var(--color-moss);
-  --brand-color-rgb: 34, 211, 238;
-  --border-card-hover: rgba(56, 189, 248, 0.9);
+  /* Marca/acentos - salmão */
+  --color-salmon: #ff7d5a;
+  --color-moss: #ff7d5a;
+  --brand-color: #ff7d5a;
+  --brand-color-rgb: 255, 125, 90;
+  --border-card-hover: #ff7d5a;
 
   /* Componentes específicos */
-  --color-scrollbar-thumb: rgba(56, 189, 248, 0.4);
-  --color-scrollbar-thumb-hover: rgba(34, 211, 238, 0.7);
+  --color-scrollbar-thumb: #33333a;
+  --color-scrollbar-thumb-hover: #ff7d5a;
 }
 
-/* Grid de fundo com tom tech */
+/* Grid de fundo com cor de linha grafite */
 body {
   background-color: var(--bg-color);
-  background-image: radial-gradient(rgba(56, 189, 248, 0.16) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(43, 43, 49, 1) 1px, transparent 1px);
   background-size: 24px 24px;
   color: var(--text-main);
 }
 
-/* Header com glassmorphism */
+/* Header */
 .site-header {
   background: var(--bg-header);
   border-bottom: 1px solid var(--border-color);
-  -webkit-backdrop-filter: blur(16px) saturate(120%);
-  backdrop-filter: blur(16px) saturate(120%);
 }
 
 .brand {
@@ -64,7 +59,7 @@ body {
 }
 
 .brand-cursor {
-  background-color: var(--color-moss);
+  background-color: var(--brand-color);
 }
 
 /* Navegação */
@@ -79,27 +74,61 @@ body {
 
 /* Botão CV */
 .cv-btn {
-  background: linear-gradient(90deg, rgba(34, 211, 238, 0.9) 0%, rgba(56, 189, 248, 0.9) 100%);
-  color: #06121f !important;
+  background: var(--brand-color);
+  color: #1a1a1e !important;
   border-radius: 4px;
-  box-shadow: 0 0 0 rgba(56, 189, 248, 0);
 }
 
 .cv-btn:hover {
-  background: linear-gradient(90deg, rgba(56, 189, 248, 1) 0%, rgba(14, 165, 233, 1) 100%);
-  color: #06121f !important;
+  background: #ff6b47;
+  color: #1a1a1e !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px -12px rgba(56, 189, 248, 0.9);
 }
 
-/* Hero com glow tech */
+/* Botão flutuante de currículo */
+.cv-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.1rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  border-radius: 6px;
+  background: var(--brand-color);
+  color: #1a1a1e !important;
+  border: none;
+  transition: all 0.25s ease;
+}
+
+.cv-btn:hover {
+  background: #ff6b47;
+  color: #1a1a1e !important;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .cv-btn {
+    bottom: 20px;
+    right: 20px;
+    padding: 0.55rem 0.9rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Hero */
 .hero-glow {
-  background: radial-gradient(circle, rgba(34, 211, 238, 0.18) 0%, transparent 70%);
+  background: transparent;
 }
 
 .hero-title {
   color: var(--text-bright);
-  text-shadow: 0 10px 60px rgba(56, 189, 248, 0.12);
 }
 
 .hero-tagline {
@@ -107,17 +136,16 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(90deg, rgba(34, 211, 238, 0.95) 0%, rgba(56, 189, 248, 0.95) 100%);
-  color: #06121f;
+  background: var(--brand-color);
+  color: #1a1a1e;
   font-family: var(--font-mono);
-  border: 1px solid rgba(56, 189, 248, 0.6);
+  border: none;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(90deg, rgba(56, 189, 248, 1) 0%, rgba(14, 165, 233, 1) 100%);
-  color: #06121f;
+  background: #ff6b47;
+  color: #1a1a1e;
   transform: translateY(-2px);
-  box-shadow: 0 10px 40px -16px rgba(56, 189, 248, 0.9);
 }
 
 /* Seções */
@@ -137,21 +165,17 @@ body {
   color: var(--text-muted);
 }
 
-/* Cards de projeto - glassmorphism leve */
+/* Cards de projeto */
 .project-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: 6px;
-  -webkit-backdrop-filter: blur(12px) saturate(110%);
-  backdrop-filter: blur(12px) saturate(110%);
-  box-shadow: 0 30px 60px -40px rgba(56, 189, 248, 0.8);
 }
 
 .project-card:hover {
   background: var(--bg-surface-hover);
   border-color: var(--border-card-hover);
   transform: translateY(-4px);
-  box-shadow: 0 40px 70px -40px rgba(56, 189, 248, 0.9);
 }
 
 .project-title {
@@ -164,7 +188,7 @@ body {
 
 /* Tags */
 .tag {
-  background: linear-gradient(90deg, rgba(34, 211, 238, 0.9) 0%, rgba(56, 189, 248, 0.9) 100%);
+  background: var(--brand-color);
   color: var(--text-tag);
   font-family: var(--font-mono);
 }
@@ -180,75 +204,28 @@ body {
 
 /* Timeline / Experiência */
 .timeline-container:before {
-  background: linear-gradient(to bottom, var(--brand-color) 0%, rgba(56, 189, 248, 0.12) 100%);
+  background: var(--line-color);
 }
 
 .timeline-dot {
   background: var(--bg-color);
   border: 3px solid var(--brand-color);
-  box-shadow: 0 0 12px rgba(var(--brand-color-rgb), 0.5);
 }
 
 .timeline-item:hover .timeline-dot {
   background: var(--brand-color);
-  box-shadow: 0 0 18px rgba(var(--brand-color-rgb), 0.9);
 }
 
 .timeline-content {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  -webkit-backdrop-filter: blur(14px) saturate(115%);
-}
-
-/* Botão flutuante de currículo - irmão de #root, bottom-right */
-.cv-btn {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  z-index: 1000;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.65rem 1.1rem;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-decoration: none;
-  letter-spacing: 0.02em;
-  border-radius: 6px;
-  background: linear-gradient(90deg, rgba(34, 211, 238, 0.95) 0%, rgba(56, 189, 248, 0.95) 100%);
-  color: #06121f !important;
-  border: 1px solid rgba(56, 189, 248, 0.7);
-  box-shadow: 0 10px 40px -16px rgba(56, 189, 248, 0.9);
-  transition: all 0.25s ease;
-  backdrop-filter: blur(8px) saturate(120%);
-  -webkit-backdrop-filter: blur(8px) saturate(120%);
-}
-
-.cv-btn:hover {
-  background: linear-gradient(90deg, rgba(56, 189, 248, 1) 0%, rgba(14, 165, 233, 1) 100%);
-  color: #06121f !important;
-  transform: translateY(-3px);
-  box-shadow: 0 14px 44px -12px rgba(56, 189, 248, 0.95);
-}
-
-@media (max-width: 768px) {
-  .cv-btn {
-    bottom: 20px;
-    right: 20px;
-    padding: 0.55rem 0.9rem;
-    font-size: 0.8rem;
-  }
-}
-  backdrop-filter: blur(14px) saturate(115%);
   border-radius: 12px;
 }
 
 .timeline-item:hover .timeline-content {
-  background: rgba(22, 32, 51, 0.9);
-  border-color: rgba(56, 189, 248, 0.8);
+  background: var(--bg-surface-hover);
+  border-color: var(--border-card-hover);
   transform: translate(5px);
-  box-shadow: 0 40px 70px -50px rgba(56, 189, 248, 0.9);
 }
 
 .timeline-role {
@@ -257,7 +234,7 @@ body {
 
 .timeline-period {
   color: var(--color-salmon);
-  background: rgba(56, 189, 248, 0.14);
+  background: rgba(255, 125, 90, 0.14);
 }
 
 .timeline-company {
@@ -273,9 +250,6 @@ body {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: 10px;
-  -webkit-backdrop-filter: blur(12px) saturate(115%);
-  backdrop-filter: blur(12px) saturate(115%);
-  box-shadow: 0 40px 70px -50px rgba(56, 189, 248, 0.7);
 }
 
 .language-chart-title {
@@ -300,7 +274,7 @@ body {
 
 /* Contato */
 .contact-info h3 {
-  color: var(--color-moss);
+  color: var(--brand-color);
   font-family: var(--font-mono);
 }
 
@@ -311,8 +285,6 @@ body {
 .contact-methods {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  -webkit-backdrop-filter: blur(12px) saturate(115%);
-  backdrop-filter: blur(12px) saturate(115%);
 }
 
 .contact-methods p {
@@ -323,8 +295,6 @@ body {
 .contact-form {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  -webkit-backdrop-filter: blur(12px) saturate(115%);
-  backdrop-filter: blur(12px) saturate(115%);
 }
 
 .input-group label {
@@ -342,27 +312,26 @@ body {
 
 .input-group input:focus,
 .input-group textarea:focus {
-  border-color: var(--color-salmon);
+  border-color: var(--brand-color);
   outline: none;
-  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.25);
+  box-shadow: 0 0 0 1px rgba(255, 125, 90, 0.4);
 }
 
 .submit-btn {
-  background: linear-gradient(90deg, rgba(34, 211, 238, 0.95) 0%, rgba(56, 189, 248, 0.95) 100%);
-  color: #06121f;
+  background: var(--brand-color);
+  color: #1a1a1e;
   font-family: var(--font-mono);
   border: none;
 }
 
 .submit-btn:hover {
-  background: linear-gradient(90deg, rgba(56, 189, 248, 1) 0%, rgba(14, 165, 233, 1) 100%);
-  color: #06121f;
+  background: #ff6b47;
+  color: #1a1a1e;
   transform: translateY(-2px);
-  box-shadow: 0 10px 40px -16px rgba(56, 189, 248, 0.9);
 }
 
 .form-status {
-  color: var(--color-moss);
+  color: var(--brand-color);
   font-family: var(--font-mono);
 }
 
