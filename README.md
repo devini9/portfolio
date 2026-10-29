@@ -10,7 +10,7 @@ Funcionalidades:
 - Currículo online em pt-BR (Fundador & Consultor de Dados e IA, DEVINI)
 - Botão "Currículo PDF" com download direto
 - PDF ATS-friendly (1 página, coluna única, texto real extraível, seções padrão)
-- Tema visual "Modern Tech" (override CSS — bundles originais intocados)
+- Tema visual personalizado (salmão #ff7d5a sobre grafite #1a1a1e, sem sombras — override CSS, bundles originais intocados)
 - Sync diário de dados do GitHub (stats, linguagens) com push automático de dados
 - SEO/ATS: schema.org Person (jobTitle + worksFor), meta description com keywords e `<noscript>` legível por crawlers sem JS
 
