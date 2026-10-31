@@ -382,17 +382,12 @@ body {
   display: none !important;
 }
 
+/* GIFs em largura cheia (1 coluna) — legibilidade máxima */
 #projects .staff-gif-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 28px;
+  gap: 32px;
   margin-top: 24px;
-}
-
-@media (min-width: 900px) {
-  #projects .staff-gif-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 .staff-gif-card {
