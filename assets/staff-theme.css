@@ -414,7 +414,7 @@ body {
 
 .staff-gif-card img {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: auto; /* proporção dinâmica por projeto */
   object-fit: contain;
   border-radius: 6px;
   border: 1px solid #2a2a30;
