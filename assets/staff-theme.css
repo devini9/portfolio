@@ -407,7 +407,7 @@ body {
 }
 
 /* =========================
-   REDESIGN: Ritmo + Assimetria
+   REDESIGN: Ritmo + Simetria
    ========================= */
 
 /* Zero blur/backdrop-filter */
@@ -425,72 +425,51 @@ body {
   padding: 100px 2rem 0 !important;
 }
 
-/* Seções - ritmo mais apertado */
+/* Seções - ritmo apertado, simétricas */
 .section {
   padding: 36px 0 !important;
 }
-
-/* Hero - mais apertado, alinhado à esquerda com max-width menor */
 .hero {
   padding: 40px 0 28px !important;
 }
-.hero-content {
-  max-width: 900px !important;
-  margin-left: 0 !important;
-  margin-right: auto !important;
-}
 
-/* Experience - deslocado à direita, max-width ~1100px */
+/* Todo conteúdo de seção: MESMA largura, MESMO alinhamento (simetria) */
+.hero-content,
 #experience .section-header,
 #experience .section-lead,
 #experience .timeline-container,
-#experience .language-chart-container {
-  max-width: 1100px !important;
-  margin-left: auto !important;
-  margin-right: 0 !important;
-}
-#experience .section-header {
-  justify-content: flex-end !important;
-  text-align: right !important;
-}
-#experience .section-line {
-  flex-grow: 0 !important;
-  width: 120px !important;
-  margin-left: 1.5rem !important;
-}
-
-/* Projects - full-bleed largura total */
-#projects {
-  width: 100% !important;
-  max-width: 1400px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
+#experience .language-chart-container,
 #projects .section-header,
-#projects .section-lead {
-  max-width: 1200px !important;
-  margin-left: 0 !important;
-  margin-right: auto !important;
-}
-#projects .staff-gif-grid {
-  max-width: 1400px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  gap: 24px !important;
-}
-
-/* Contato - alinhado à esquerda, max-width ~850px */
+#projects .section-lead,
+#projects .staff-gif-grid,
 #contato .section-header,
 #contato .section-lead,
 #contato .contact-info,
 #contato .contact-methods,
 #contato .contact-form {
-  max-width: 850px !important;
-  margin-left: 0 !important;
+  max-width: 1100px !important;
+  margin-left: auto !important;
   margin-right: auto !important;
 }
+#experience .section-header,
 #contato .section-header {
   justify-content: flex-start !important;
+  text-align: left !important;
+}
+#experience .section-line {
+  width: auto !important;
+  flex-grow: 1 !important;
+  margin-left: 1.5rem !important;
+}
+
+/* Terminais GIF no padrão das outras caixas (mesma largura, centrados) */
+#projects .staff-gif-grid {
+  gap: 24px !important;
+}
+
+/* Contato removido (a pedido) */
+#contato {
+  display: none !important;
 }
 
 /* Footer - mais apertado */
@@ -506,10 +485,6 @@ body {
 .timeline-content {
   padding: 1.25rem !important;
 }
-.project-tags {
-  gap: 0.4rem !important;
-  margin-bottom: 1rem !important;
-}
 
 /* Responsivo mobile - NUNCA quebrar */
 @media (max-width: 768px) {
@@ -522,70 +497,21 @@ body {
   .hero {
     padding: 36px 0 24px !important;
   }
-  .hero-content {
-    max-width: 100% !important;
-  }
+  .hero-content,
   #experience .section-header,
   #experience .section-lead,
   #experience .timeline-container,
-  #experience .language-chart-container {
+  #experience .language-chart-container,
+  #projects .staff-gif-grid {
     max-width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
-  #experience .section-header {
-    justify-content: flex-start !important;
-    text-align: left !important;
-  }
-  #experience .section-line {
-    width: auto !important;
-    flex-grow: 1 !important;
-  }
-  #projects {
-    max-width: 100% !important;
-  }
   #projects .staff-gif-grid {
-    max-width: 100% !important;
     gap: 20px !important;
-  }
-  #contato .section-header,
-  #contato .section-lead,
-  #contato .contact-info,
-  #contato .contact-methods,
-  #contato .contact-form {
-    max-width: 100% !important;
   }
   .site-footer {
     margin-top: 28px !important;
     padding: 16px 1rem !important;
-  }
-}
-
-/* ===== Assimetria v2 — larguras/offsets distintos por seção (medido: main-container 1208) ===== */
-@media (min-width: 900px) {
-  .hero, #hero {
-    max-width: 980px !important;
-    margin-left: 0 !important;
-    margin-right: auto !important;
-    padding-top: 40px !important;
-    padding-bottom: 24px !important;
-  }
-  #experience {
-    max-width: 1080px !important;
-    margin-left: auto !important;
-    margin-right: 0 !important;
-  }
-  #projects {
-    max-width: none !important;
-    width: 100vw !important;
-    margin-left: calc(50% - 50vw) !important;
-    margin-right: 0 !important;
-    padding-left: 32px !important;
-    padding-right: 32px !important;
-  }
-  #contato {
-    max-width: 880px !important;
-    margin-left: 0 !important;
-    margin-right: auto !important;
   }
 }
