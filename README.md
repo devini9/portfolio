@@ -1,5 +1,9 @@
 # Portfolio & Currículo Online — devini9
 
+**Como este projeto foi criado** — do pedido ao deploy, pelo fluxo STAFF Dinâmico (Hermes gerente + OpenCode codificador + gates de aprovação)
+
+![Fluxo de trabalho do portfólio](docs/workflow.gif)
+
 Site e currículo online de Vinícius Mugnes Ferreira Vitorino, servido no GitHub Pages.
 
 ## Descrição
