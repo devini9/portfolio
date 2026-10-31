@@ -76,7 +76,7 @@
 
     <script type="module" crossorigin src="/portfolio/assets/index-CJi94Os4.js"></script>
     <link rel="stylesheet" crossorigin href="/portfolio/assets/index-7BE-gVn4.css">
-    <link rel="stylesheet" href="/portfolio/assets/staff-theme.css?v=20261029">
+    <link rel="stylesheet" href="/portfolio/assets/staff-theme.css?v=20261031">
   </head>
   <body>
     <div id="root"></div>
@@ -94,5 +94,126 @@
         </p>
       </div>
     </noscript>
+    <script id="staff-projects">
+      (function () {
+        var applied = false;
+        var observer = null;
+        var timeoutId = null;
+
+        function buildGrid() {
+          var grid = document.createElement('div');
+          grid.className = 'staff-gif-grid';
+
+          var items = [
+            { repo: 'devini9/deLives', gif: 'gifs/delives.gif', alt: 'Como o deLives foi criado — fluxo STAFF Dinâmico' },
+            { repo: 'devini9/DePromo', gif: 'gifs/depromo.gif', alt: 'Como o DePromo foi criado — fluxo STAFF Dinâmico' },
+            { repo: 'devini9/portfolio', gif: 'gifs/portfolio.gif', alt: 'Como o portfolio foi criado — fluxo STAFF Dinâmico' }
+          ];
+
+          for (var i = 0; i < items.length; i++) {
+            var item = items[i];
+            var figure = document.createElement('figure');
+            figure.className = 'staff-gif-card';
+
+            var figcaption = document.createElement('figcaption');
+            var span = document.createElement('span');
+            span.className = 'staff-repo';
+            span.textContent = item.repo;
+            figcaption.appendChild(span);
+
+            var img = document.createElement('img');
+            img.src = item.gif;
+            img.alt = item.alt;
+
+            figure.appendChild(figcaption);
+            figure.appendChild(img);
+            grid.appendChild(figure);
+          }
+
+          return grid;
+        }
+
+        function apply() {
+          if (applied) return true;
+          var projects = document.getElementById('projects');
+          if (!projects) return false;
+          var projectGrid = projects.querySelector('.project-grid');
+          if (!projectGrid) return false;
+
+          // Keep the h2 title if present
+          var h2 = projects.querySelector('h2');
+          // Remove existing project grids and overlays
+          var grids = projects.querySelectorAll('.project-grid');
+          for (var i = 0; i < grids.length; i++) {
+            if (grids[i].parentNode) {
+              grids[i].parentNode.removeChild(grids[i]);
+            }
+          }
+          // Remove common overlay classes if present
+          var overlays = projects.querySelectorAll('.project-overlay, .overlay');
+          for (var j = 0; j < overlays.length; j++) {
+            if (overlays[j].parentNode) {
+              overlays[j].parentNode.removeChild(overlays[j]);
+            }
+          }
+
+          var newGrid = buildGrid();
+          projects.appendChild(newGrid);
+          applied = true;
+          return true;
+        }
+
+        function tryApply() {
+          if (apply()) {
+            setupObserver();
+            if (timeoutId) {
+              clearTimeout(timeoutId);
+              timeoutId = null;
+            }
+          }
+        }
+
+        function setupObserver() {
+          if (observer) return;
+          var projects = document.getElementById('projects');
+          if (!projects) return;
+          observer = new MutationObserver(function () {
+            if (applied) {
+              var hasOldGrid = projects.querySelector('.project-grid');
+              if (hasOldGrid) {
+                apply();
+              }
+            } else {
+              tryApply();
+            }
+          });
+          observer.observe(projects, { childList: true, subtree: true });
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', tryApply);
+        } else {
+          tryApply();
+        }
+
+        var start = Date.now();
+        var interval = setInterval(function () {
+          if (applied) {
+            clearInterval(interval);
+            return;
+          }
+          tryApply();
+          if (Date.now() - start > 10000) {
+            clearInterval(interval);
+          }
+        }, 200);
+
+        timeoutId = setTimeout(function () {
+          if (!applied) {
+            tryApply();
+          }
+        }, 10000);
+      })();
+    </script>
   </body>
 </html>
