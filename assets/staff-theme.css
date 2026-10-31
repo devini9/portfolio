@@ -390,34 +390,10 @@ body {
   margin-top: 24px;
 }
 
-.staff-gif-card {
-  background: #232327;
-  border: 1px solid #2a2a30;
-  border-radius: 10px;
-  padding: 18px 18px 14px;
-  margin: 0;
-  /* SEM blur/backdrop-filter */
-  box-shadow: none;
-}
-
-.staff-repo {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  color: #ff7d5a;
-  font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 0.3px;
-}
-
-.staff-gif-card figcaption {
-  margin-bottom: 10px;
-}
-
-.staff-gif-card img {
+/* Só o terminal: sem caixa externa, sem label — o GIF já traz o nome do projeto na barra */
+#projects .staff-gif-grid img.staff-gif {
   width: 100%;
   height: auto; /* proporção dinâmica por projeto */
-  object-fit: contain;
-  border-radius: 6px;
-  border: 1px solid #2a2a30;
-  background: #1a1a1e;
+  border-radius: 8px;
   display: block;
 }
