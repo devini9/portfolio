@@ -76,7 +76,7 @@
 
     <script type="module" crossorigin src="/portfolio/assets/index-CJi94Os4.js"></script>
     <link rel="stylesheet" crossorigin href="/portfolio/assets/index-7BE-gVn4.css">
-    <link rel="stylesheet" href="/portfolio/assets/staff-theme.css?v=20261101">
+    <link rel="stylesheet" href="/portfolio/assets/staff-theme.css?v=20261102">
   </head>
   <body>
     <div id="root"></div>
@@ -112,22 +112,11 @@
 
           for (var i = 0; i < items.length; i++) {
             var item = items[i];
-            var figure = document.createElement('figure');
-            figure.className = 'staff-gif-card';
-
-            var figcaption = document.createElement('figcaption');
-            var span = document.createElement('span');
-            span.className = 'staff-repo';
-            span.textContent = item.repo;
-            figcaption.appendChild(span);
-
             var img = document.createElement('img');
+            img.className = 'staff-gif';
             img.src = item.gif;
             img.alt = item.alt;
-
-            figure.appendChild(figcaption);
-            figure.appendChild(img);
-            grid.appendChild(figure);
+            grid.appendChild(img);
           }
 
           return grid;
