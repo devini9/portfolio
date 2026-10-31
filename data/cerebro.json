@@ -1,15 +1,15 @@
 {
   "metadata": {
-    "lastUpdate": "2026-10-30T06:00:11.770+00:00",
+    "lastUpdate": "2026-10-31T06:00:12.797+00:00",
     "source": "GitHub API + LinkedIn público + PDF currículo",
     "githubUser": "devini9",
     "githubName": "Vinicius Mugnes Ferreira Vitorino",
     "githubBio": "E ai, tudo certo? 🤙🏾",
-    "githubFollowers": 1,
+    "githubFollowers": 2,
     "githubRepos": 1,
-    "githubPublicRepos": 1,
-    "githubPrivateRepos": 3,
-    "githubTotalRepos": 4,
+    "githubPublicRepos": 3,
+    "githubPrivateRepos": 4,
+    "githubTotalRepos": 7,
     "linkedinFollowers": 1014
   },
   "projetos": [
@@ -84,38 +84,93 @@
   "artigos": [],
   "techStats": [
     {
+      "language": "C",
+      "percentage": 50.9,
+      "color": "#cccccc"
+    },
+    {
+      "language": "C++",
+      "percentage": 36.8,
+      "color": "#cccccc"
+    },
+    {
+      "language": "CMake",
+      "percentage": 3.4,
+      "color": "#cccccc"
+    },
+    {
+      "language": "Swift",
+      "percentage": 2.9,
+      "color": "#cccccc"
+    },
+    {
+      "language": "Objective-C",
+      "percentage": 2.5,
+      "color": "#cccccc"
+    },
+    {
+      "language": "Objective-C++",
+      "percentage": 1.7,
+      "color": "#cccccc"
+    },
+    {
       "language": "Python",
-      "percentage": 88.6,
+      "percentage": 1.2,
       "color": "#3572A5"
     },
     {
-      "language": "CSS",
-      "percentage": 5.0,
+      "language": "M",
+      "percentage": 0.2,
+      "color": "#cccccc"
+    },
+    {
+      "language": "Lua",
+      "percentage": 0.1,
       "color": "#cccccc"
     },
     {
       "language": "HTML",
-      "percentage": 4.6,
+      "percentage": 0.1,
       "color": "#e34c26"
     },
     {
+      "language": "Shell",
+      "percentage": 0.1,
+      "color": "#cccccc"
+    },
+    {
+      "language": "CSS",
+      "percentage": 0.1,
+      "color": "#cccccc"
+    },
+    {
+      "language": "SWIG",
+      "percentage": 0.1,
+      "color": "#cccccc"
+    },
+    {
       "language": "Batchfile",
-      "percentage": 0.7,
+      "percentage": 0.0,
       "color": "#C1F12E"
     },
     {
+      "language": "AppleScript",
+      "percentage": 0.0,
+      "color": "#cccccc"
+    },
+    {
       "language": "Dockerfile",
-      "percentage": 0.6,
+      "percentage": 0.0,
       "color": "#384d54"
     },
     {
       "language": "Go",
-      "percentage": 0.4,
+      "percentage": 0.0,
       "color": "#00ADD8"
     }
   ],
   "privateRepos": {
-    "count": 3,
+    "count": 4,
     "summary": "arquitetura de dados avançada, Inteligência Artificial (registro de agentes deAgent), processamento em nuvem e automação corporativa com Python e SQL"
   },
   "curriculo": {
