@@ -462,9 +462,13 @@ body {
   margin-left: 1.5rem !important;
 }
 
-/* Terminais GIF no padrão das outras caixas (mesma largura, centrados) */
+/* Terminais GIF mais largos + descrição de repos privados removida (a pedido) */
 #projects .staff-gif-grid {
   gap: 24px !important;
+  max-width: 1272px !important;
+}
+#projects .private-repos-note {
+  display: none !important;
 }
 
 /* Contato removido (a pedido) */
