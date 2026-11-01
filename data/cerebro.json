@@ -1,15 +1,15 @@
 {
   "metadata": {
-    "lastUpdate": "2026-10-31T06:00:12.797+00:00",
+    "lastUpdate": "2026-11-01T06:00:14.602+00:00",
     "source": "GitHub API + LinkedIn público + PDF currículo",
     "githubUser": "devini9",
     "githubName": "Vinicius Mugnes Ferreira Vitorino",
     "githubBio": "E ai, tudo certo? 🤙🏾",
     "githubFollowers": 2,
     "githubRepos": 1,
-    "githubPublicRepos": 3,
+    "githubPublicRepos": 2,
     "githubPrivateRepos": 4,
-    "githubTotalRepos": 7,
+    "githubTotalRepos": 6,
     "linkedinFollowers": 1014
   },
   "projetos": [
@@ -85,7 +85,7 @@
   "techStats": [
     {
       "language": "C",
-      "percentage": 50.9,
+      "percentage": 50.8,
       "color": "#cccccc"
     },
     {
@@ -129,17 +129,17 @@
       "color": "#cccccc"
     },
     {
+      "language": "CSS",
+      "percentage": 0.1,
+      "color": "#cccccc"
+    },
+    {
       "language": "HTML",
       "percentage": 0.1,
       "color": "#e34c26"
     },
     {
       "language": "Shell",
-      "percentage": 0.1,
-      "color": "#cccccc"
-    },
-    {
-      "language": "CSS",
       "percentage": 0.1,
       "color": "#cccccc"
     },
